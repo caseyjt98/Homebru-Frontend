@@ -1,8 +1,53 @@
 <ion-header>
-        <ion-navbar>
-          <ion-title>
-            Welcome Back!
-          </ion-title>
-        </ion-navbar>
-      </ion-header>
+    <ion-navbar>
+        <ion-title>
+          Welcome Back! Below is a list of suggested events near you:
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+      
+
+<ion-content>
+
+
+    <ion-list>
+        
+        <ion-card>
+            <ion-card-header>
+                Event One
+            </ion-card-header>
+            
+            <ion-card-content>
+                Info about event one
+            </ion-card-content>
+
+            <div padding>
+                    <button ion-button clear>Buy Tickets</button>
+            </div>
+
+        </ion-card>
+
+        <ion-card>
+            <ion-card-header>
+                Event Two
+            </ion-card-header>
+            <ion-card-content>
+                Info about event two
+            </ion-card-content>
+
+            <div padding>
+                <button ion-button clear>Make Reservation</button>
+            </div>
+
+        </ion-card>
+        
+            
+    </ion-list>
+    
+      
+    <div padding>
+        <button ion-button color="primary" (click) = "navigateToProfile()">View/ Edit Profile</button>
+    </div>
+        
+</ion-content>
       

@@ -10,10 +10,4 @@ export class RegistrationPage {
   constructor(public navCtrl: NavController) {}
 
 
-  navigateToRegistration() {
-
-    console.log("Navigating...") 
-
-  }
-
 }
