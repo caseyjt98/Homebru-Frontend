@@ -9,62 +9,18 @@
 <ion-content>
 
 
-    <ion-list>
-        
-
+    <ion-list *ngFor = "let event of eventArray">
         <ion-card>
-            <img src="https://bettyandkora.files.wordpress.com/2015/01/zeddsnowglobe.jpg"
+            <img src = {{event.image}}
             style = "width:450px;height:300px;"/>
-     
-                    <ion-card-title>
-                        Snowglobe Music Festival
-                    </ion-card-title>
-                    <p>
-                        Located in South Lake Tahoe, Snowglobe Music Festival is a Festival
-                        dedicated to a variety of successful edm artists.
-                    </p>
-              
-
-
+            <ion-card-title>
+                {{event.name}}
+            </ion-card-title>
+            <p>
+                {{event.description}}
+            </p>
 
             <ion-row no-padding>
-                <ion-col>
-                    <button ion-button clear small color="danger" icon-start>
-                        <ion-icon name='star'></ion-icon>
-                            Add to Itinerary
-                    </button>
-                </ion-col>
-                 
-                <ion-col text-center>
-                    <button ion-button clear small color="danger" icon-start>
-                        <ion-icon name='share-alt'></ion-icon>
-                            Buy Tickets
-                    </button>
-                </ion-col>
-            </ion-row>
-                  
-        </ion-card>
-
-
-
-
-        <ion-card>
-                <img src="https://image.iol.co.za/image/1/process/620x349?source=https://inm-baobab-prod-eu-west-1.s3.amazonaws.com/public/inm/media/image/iol/2018/06/20/15569144/32152042_442704436140199_1550968447851036672_n.jpg"
-                style = "width:450px;height:300px;"/>
-         
-                        <ion-card-title>
-                            The Test Kitchen South Africa
-                        </ion-card-title>
-                        <p>
-                            The Test Kitchen is one of the most renowned restaurants
-                            in the world. It provides a unique experience that goes
-                            above and beyond its competitors.  
-                        </p>
-                  
-    
-    
-    
-                <ion-row no-padding>
                     <ion-col>
                         <button ion-button clear small color="danger" icon-start>
                             <ion-icon name='star'></ion-icon>
@@ -75,13 +31,13 @@
                     <ion-col text-center>
                         <button ion-button clear small color="danger" icon-start>
                             <ion-icon name='share-alt'></ion-icon>
-                                Make Reservations
+                                Buy Tickets
                         </button>
                     </ion-col>
-                </ion-row>
-                      
-            </ion-card>
-
+            </ion-row>
+        
+        </ion-card>
+        
     </ion-list>
     
       
