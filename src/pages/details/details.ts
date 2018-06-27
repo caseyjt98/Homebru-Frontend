@@ -15,8 +15,12 @@ import { LoginPage } from '../login/login';
 })
 export class DetailsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public currEvent: Event;
+  constructor(public navCtrl: NavController,  public navParams: NavParams) {
+    this.currEvent = navParams.get('currEvent');
   }
+
+  
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailsPage');
