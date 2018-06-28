@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { PaymentHistoryPage } from '../payment-history/payment-history';
 
 /**
  * Generated class for the PaymentPage page.
@@ -21,5 +22,9 @@ export class PaymentPage {
     console.log('ionViewDidLoad PaymentPage');
   }
 
+  navigateToPaymentHistory() {
+    console.log('navigating...')
+    this.navCtrl.push(PaymentHistoryPage);
+  }
 }
 

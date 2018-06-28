@@ -12,6 +12,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { setInterestsPage } from '../pages/setInterests/setInterests';
 import { DetailsPage } from '../pages/details/details';
 import { PaymentPage } from '../pages/payment/payment';
+import { PaymentHistoryPage } from '../pages/payment-history/payment-history';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PaymentPage } from '../pages/payment/payment';
     ProfilePage,
     setInterestsPage,
     DetailsPage,
-    PaymentPage
+    PaymentPage,
+    PaymentHistoryPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { PaymentPage } from '../pages/payment/payment';
     ProfilePage,
     setInterestsPage,
     DetailsPage,
-    PaymentPage
+    PaymentPage,
+    PaymentHistoryPage
   ],
   providers: [
     StatusBar,
