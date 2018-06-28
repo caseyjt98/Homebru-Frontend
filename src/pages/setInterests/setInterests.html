@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar>
         <ion-title>
-            Set Your Interests Below:
+            Set Your Preferences Below:
         </ion-title>
     </ion-navbar>
 </ion-header>
@@ -11,37 +11,54 @@
 
 <ion-content padding>
 
-    <p>
-        <button ion-button color = "light" round small> Indian Cuisine </button>
-        <button ion-button color = "default" round small> Thai Cuisine </button>
-        <button ion-button color = "dark" round small> American Cuisine </button>
-        <button ion-button color = "light" round small> Asian Cuisine </button>
-    </p>
+    <!-- use sliders to set preferences for noise, how early/ late you stay up, etc-->
+          
+          <ion-content class="outer-content">
+            <ion-list>
+              <ion-list-header>
+                Do you consider yourself to be more an early bird or a night owl?
+              </ion-list-header>
+              <ion-item>
+                <ion-range [(ngModel)]="brightness">
+                  <ion-icon range-left small name="sunny"></ion-icon>
+                  <ion-icon range-right name="sunny"></ion-icon>
+                </ion-range>
+              </ion-item>
+              <ion-list-header>
+                   How social do you consider yourself to be? 
+                </ion-list-header>
+              <ion-item>
+                <ion-range dualKnobs="true" pin="true" [(ngModel)]="structure" color="dark">
+                  <ion-icon range-left small name="brush"></ion-icon>
+                  <ion-icon range-right name="brush"></ion-icon>
+                </ion-range>
+              </ion-item>
+              
 
-    <p>
-        <button ion-button color = "light" round small> Country Music </button>
-        <button ion-button color = "default" round small> Rap Music </button>
-        <button ion-button color = "dark" round small> Pop Music </button>
-        <button ion-button color = "light" round small> Classical Music </button>
-    </p>
-   
+<!-- check list to set other preferences? -->
 
-    <p>
-        <button ion-button color = "light" round small> Hiking </button>
-        <button ion-button color = "default" round small> Wine Tasting </button>
-        <button ion-button color = "dark" round small> Nature </button>            <button ion-button color = "light" round small> Classical Music </button>
-    </p>
-
-     <p>
-        <button ion-button color = "light" round small> Cooking </button>
-        <button ion-button color = "default" round small> Shopping </button>
-        <button ion-button color = "dark" round small> Adventure </button>
-        <button ion-button color = "light" round small> Swimming </button>
-    </p>
-    
-    <p>
-        <button ion-button color = "light" round small> Clubbing </button>
-        <button ion-button color = "default" round small> Brunch </button>
-    </p>
+            </ion-list>
+          
+            <ion-list>
+              <ion-list-header>
+                Adjust Text
+              </ion-list-header>
+              <ion-item>
+                <ion-range min="-100" step="10" snaps="true" [(ngModel)]="text">
+                  <ion-label range-left class="small-text">A</ion-label>
+                  <ion-label range-right>A</ion-label>
+                </ion-range>
+              </ion-item>
+            </ion-list>
+          </ion-content>
+          
+          <style>
+            ion-list + ion-list {
+              margin-top: 0;
+            }
+            .small-text {
+              font-size: 10px;
+            }
+          </style>
 
 </ion-content>
