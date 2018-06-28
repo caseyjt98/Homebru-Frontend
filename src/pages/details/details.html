@@ -1,27 +1,32 @@
 <!--
   Generated template for the DetailsPage page.
-
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Details</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-    <ion-content class="card-background-page">
-      <ion-card>
-           
-          <div class="card-title"> {{currEvent.name}}</div>
-          <img src = {{currEvent.image}}
-          style = "width:750px;height:500px;"/>
-          <div class="card-subtitle">{{currEvent.details}}</div>
-      </ion-card>
-
-     
-
-</ion-content>
+    <ion-navbar>
+      <ion-title>Details</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  
+  <ion-content padding>
+  
+    <h1>
+      {{ currProperty.address }}
+    </h1>
+  
+      <p>
+        {{ currProperty.details }}
+      </p>
+  
+      
+      <img src = {{currProperty.image}}
+      style= "width:750px;height:500px;" />
+      
+  
+      
+  </ion-content>

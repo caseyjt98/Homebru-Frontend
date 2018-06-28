@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 import { DetailsPage } from '../details/details';
-import { Event } from '../../models/event';
+import { Property } from '../../models/property';
 
 @Component({
   selector: 'page-login',
@@ -10,40 +10,33 @@ import { Event } from '../../models/event';
 })
 export class LoginPage {
 
-  public eventArray : Array<Event>= [];   
+    public listings: Array<Property> = [];
+
   constructor(public navCtrl: NavController) {
 
-    // hard code data for some new Event objects
-    // push to array
-    var event1 = new Event('Snowglobe', 'Music Festival', 'https://bettyandkora.files.wordpress.com/2015/01/zeddsnowglobe.jpg', 340, "Our ultimate goal with SnowGlobe is to transition into a completely sustainable event -- a dream inspired both by the South Lake Tahoe community's culture of environmentalism and our organization's personal belief in the importance of conscientious and ethical event planning. We're happy to report that with help from our amazing partners at Waste Free Earth and Chris' Cleaning, we've made impressive steps year-over-year towards reaching that goal. A tremendous amount of credit is due to you -- our fans -- for supporting us on our journey. Your passion continues to inspire us.")
-    var event2 = new Event('Test Kitchen', 'Culinary Experience', 'https://image.iol.co.za/image/1/process/620x349?source=https://inm-baobab-prod-eu-west-1.s3.amazonaws.com/public/inm/media/image/iol/2018/06/20/15569144/32152042_442704436140199_1550968447851036672_n.jpg', 50, "The Test Kitchen, which opened in November 2010, has the celebrated chef cooking at his most creative in a distinctive contemporary space. British-born Luke trained in Switzerland and England before heading to Asia for a five year stint, launching several restaurants in Singapore, Malaysia, South Korea and the Philippines. “My time in Europe taught me to cook; my time in Asia broadened my horizons")
-    var event3 = new Event("Dizzy's Karaoke",'Bar', 'https://www.capetownmagazine.com//media_lib/r2/c2d0eee948094aacd22a280c33dd2d13.img.jpg', 1, "A good time")
+    var property1 = new Property("638 Landfair Avenue", "10 person apartment, 5 bedrooms, 4 bathrooms", "details","https://scontent-jnb1-1.xx.fbcdn.net/v/t1.0-9/s720x720/35884124_1801083623268238_2366583428851171328_o.jpg?_nc_cat=0&oh=85f1c805638b6c54f26528e06194d463&oe=5B9F49CF", 800, "Kiana Mills" , 9253239578);
+    var property2 = new Property(" 55 Glendale Avenue","4 person apartment, 2 bedrooms, 2 bathrooms", "details","https://scontent-jnb1-1.xx.fbcdn.net/v/t1.0-9/36279806_382960328882776_2552084286136123392_n.jpg?_nc_cat=0&oh=08934c546debc591251cc207a6933f6d&oe=5B9F117B", 900, "Joan" , 9253234578);
+    var property3 = new Property(" 34 Midvale Avenue","6 person apartment, 3 bedrooms, 2 bathrooms", "details","https://scontent-jnb1-1.xx.fbcdn.net/v/t1.0-9/33920933_1737920576294232_2860737605442469888_n.jpg?_nc_cat=0&oh=5a7f9e976aba9e5f39824be492235612&oe=5BAE47C1", 1000, "Sue" , 9253239788) ;
+    var property4 = new Property(" 16 Kelton Street","7 person apartment, 3 bedrooms,3 bathrooms", "details","https://scontent-jnb1-1.xx.fbcdn.net/v/t1.0-9/34701403_1800030480045072_6375089673361948672_n.jpg?_nc_cat=0&oh=c391956f9729a69426f0a780a81b2aeb&oe=5BB5BC2E", 1000, "Sue" , 9253239788) ;
 
-    this.eventArray.push(event1);
-    this.eventArray.push(event2);
-    this.eventArray.push(event3);
- 
-  }
-
-
-  navigateToProfile() {
-
-    console.log("Navigating...") 
-
-    this.navCtrl.push(ProfilePage);
-
-  }
-
-  navigateToDetails(event: Event) {
-    console.log("Navigating...")
-    this.navCtrl.push(DetailsPage, { currEvent: event } );
-
-  }
-
+    this.listings.push(property1);   
+    this.listings.push(property2);   
+    this.listings.push(property3); 
+    this.listings.push(property4);    
 }
 
+  navigateToProfilePage() {
+      console.log("navigating...");
+      this.navCtrl.push(ProfilePage);
+  }
 
+  navigateToDetailsPage(property: Property) {
+    console.log("navigating...");
+    this.navCtrl.push(DetailsPage, {
+        currProperty: property
+    });
+  }
 
-// for each item (loop), create a button with that index... link to page with specific info
-// we need an array of Event objects --- where does this go?
-// constructor to create array of Event objects, which class does this exist in?
+  
+  
+}

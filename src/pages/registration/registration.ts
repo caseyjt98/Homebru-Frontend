@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { InterestsPage } from '../interests/interests';
+import { setInterestsPage } from '../setInterests/setInterests';
 
 @Component({
   selector: 'page-registration',
@@ -10,12 +10,9 @@ export class RegistrationPage {
 
   constructor(public navCtrl: NavController) {}
 
-
   navigateToInterests() {
-
-    console.log("Navigating...") 
-
-    this.navCtrl.push(InterestsPage);
-
+      console.log("navigating...");
+      this.navCtrl.push(setInterestsPage);
   }
+  
 }

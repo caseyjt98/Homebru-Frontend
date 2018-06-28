@@ -1,13 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { LoginPage } from '../login/login'; 
+import { LoginPage } from '../login/login';
+import { Property } from '../../models/property';
 
-/**
- * Generated class for the DetailsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-details',
@@ -15,16 +10,14 @@ import { LoginPage } from '../login/login';
 })
 export class DetailsPage {
 
-  public currEvent: Event;
-  constructor(public navCtrl: NavController,  public navParams: NavParams) {
-    this.currEvent = navParams.get('currEvent');
-  }
+  public currProperty: Property;
 
-  
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.currProperty= navParams.get('currProperty');
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailsPage');
   }
 
 }
-

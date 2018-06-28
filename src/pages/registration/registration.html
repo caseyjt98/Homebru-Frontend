@@ -1,47 +1,51 @@
 <ion-header>
-    <ion-navbar>
-    <ion-title>
-         Please register below.
-    </ion-title>
-    </ion-navbar>
-</ion-header>
-
-
-<ion-content>
-
+        <ion-navbar>
+          <ion-title>
+            Registration Page
+          </ion-title>
+        </ion-navbar>
+      </ion-header>
+      
+      <ion-content padding>
+          Please Register Below
+          
         <ion-list>
-      
-          <ion-item>
-            <ion-label stacked>First Name</ion-label>
-            <ion-input type="text"></ion-input>
-          </ion-item>
-
-          <ion-item>
-                <ion-label stacked>Last Name</ion-label>
+            <ion-item>
+                <ion-label stacked> First Name </ion-label>
                 <ion-input type="text"></ion-input>
-              </ion-item>
-      
-           <ion-item>
-                <ion-label stacked>Set Current Location</ion-label>
+            </ion-item>
+    
+            <ion-item>
+                <ion-label stacked> Last Name </ion-label>
                 <ion-input type="text"></ion-input>
-           </ion-item>
-
-          <ion-item>
-            <ion-label stacked>Password</ion-label>
-            <ion-input type="password"></ion-input>
-          </ion-item>
-
-          <ion-item>
-                <ion-label stacked>Confirm Password</ion-label>
-                <ion-input type="password"></ion-input>
-          </ion-item>
-
-         
-
-      
+            </ion-item>
+    
+            <ion-item>
+                <ion-label stacked> Email </ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+                <ion-label stacked> Location </ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+                <ion-label stacked> Password </ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+                <ion-label stacked> Confirm Password </ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+    
         </ion-list>
-
-        <div padding>
-            <button ion-button color="primary" (click) = "navigateToInterests()"> Complete Registration </button>
-        </div>
-</ion-content>
+          
+        <ion-item>
+            <button ion-button (click)= "navigateToInterests()"> Complete Registration</button> 
+        </ion-item>
+          
+      
+         
+      </ion-content>
