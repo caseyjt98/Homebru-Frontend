@@ -11,6 +11,7 @@ import { RegistrationPage } from '../registration/registration';
 })
 export class HomePage {
 
+
   constructor(public navCtrl: NavController) {}
 
   /** link this function to our Log In button to make it do something */
@@ -27,5 +28,8 @@ export class HomePage {
 
     this.navCtrl.push(RegistrationPage);
   }
+
+  //make a function to create instance of user
+  
   
 }
