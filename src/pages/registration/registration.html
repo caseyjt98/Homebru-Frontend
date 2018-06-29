@@ -9,7 +9,19 @@
       <ion-content padding>
           Please Register Below
           
+        
+          <ion-item>
+                <ion-label>Are you a subleaser or a subletter? </ion-label>
+                    <ion-select [(ngModel)]="subleaserOrSubletter">
+                        <ion-option value="subletter"> I'm looking for an apartment! </ion-option>
+                        <ion-option value="subleaser"> I'm leasing my apartment! </ion-option>
+                    </ion-select>
+                          
+         </ion-item>
+
+
         <ion-list>
+
             <ion-item>
                 <ion-label stacked> First Name </ion-label>
                 <ion-input type="text"></ion-input>
@@ -43,7 +55,7 @@
         </ion-list>
           
         <ion-item>
-            <button ion-button (click)= "navigateToInterests()"> Complete Registration</button> 
+            <button ion-button (click)= "navigateToInterests()"> Finish </button> 
         </ion-item>
           
       
