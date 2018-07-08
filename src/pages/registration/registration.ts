@@ -1,21 +1,26 @@
+
+
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { setInterestsPage } from '../setInterests/setInterests';
 import { User } from '../../models/user';
+import { AlertController } from 'ionic-angular';
 
 @Component({
   selector: 'page-registration',
   templateUrl: 'registration.html'
 })
+
 export class RegistrationPage {
 
-  private inputFirstName: string;
-  private inputLastName: string;
-  private inputEmail: string;
-  private inputPassword: string;
-  private inputLocation: string;
+  private firstname: string;
+  private lastname: string;
+  private email: string;
+  private password: string;
+  private location: string;
+  private isSubleaser: boolean;
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, public alerCtrl: AlertController) {}
 
   navigateToInterests() {
       console.log("navigating...");
@@ -35,7 +40,29 @@ export class RegistrationPage {
 
 
   getUserData() {
-    /** this.createNewUser(firstName, lastName, email, location, password, isSubleaser); */
+    // this.createNewUser(firstName, lastName, email, location, password, isSubleaser); 
   }
 
+  doConfirm() {
+    let confirm = this.alerCtrl.create ( {
+      title: 'Allow location access?',
+      message: 'Allow access to your current location while using the app?',
+      buttons: [
+        {
+          text: 'Agree',
+          handler: () => {
+            console.log('Agree clicked');
+          }
+        },
+        {
+          text: 'Disagree',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        }
+      ]
+    });
+    confirm.present()
+  }
 }
+
