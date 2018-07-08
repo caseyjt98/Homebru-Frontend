@@ -9,6 +9,12 @@ import { User } from '../../models/user';
 })
 export class RegistrationPage {
 
+  private inputFirstName: string;
+  private inputLastName: string;
+  private inputEmail: string;
+  private inputPassword: string;
+  private inputLocation: string;
+
   constructor(public navCtrl: NavController) {}
 
   navigateToInterests() {
@@ -17,8 +23,19 @@ export class RegistrationPage {
   }
   
   createNewUser(firstName: string, lastName: string, email: string, location: string, password: string, isSubleaser: boolean) {
-    //var user= createUser(firstName, lastName, email, password, location, isSubleaser);
-
+    var user = new User();
+    user.firstname= firstName;
+    user.lastname= lastName;
+    user.email= email;
+    user.password= password;
+    user.location= location;
+    user.isSubleaser= isSubleaser;
   }
   
+
+
+  getUserData() {
+    /** this.createNewUser(firstName, lastName, email, location, password, isSubleaser); */
+  }
+
 }

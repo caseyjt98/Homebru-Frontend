@@ -13,8 +13,8 @@
           <ion-item>
                 <ion-label>Are you a subleaser or a subletter? </ion-label>
                     <ion-select [(ngModel)]="subleaserOrSubletter">
-                        <ion-option value="subletter"> I'm looking for an apartment! </ion-option>
-                        <ion-option value="subleaser"> I'm leasing my apartment! </ion-option>
+                        <ion-option value="subletter" id = "subletterInput" > I'm looking for an apartment! </ion-option>
+                        <ion-option value="subleaser" id = "subleaserInput" > I'm leasing my apartment! </ion-option>
                     </ion-select>
                           
          </ion-item>
@@ -24,27 +24,27 @@
 
             <ion-item>
                 <ion-label stacked> First Name </ion-label>
-                <ion-input type="text"></ion-input>
+                <ion-input [(ngModel)]="inputFirstName" type="text"></ion-input>
             </ion-item>
     
             <ion-item>
                 <ion-label stacked> Last Name </ion-label>
-                <ion-input type="text"></ion-input>
+                <ion-input [(ngModel)]="inputLasttName" type="text" ></ion-input>
             </ion-item>
     
             <ion-item>
                 <ion-label stacked> Email </ion-label>
-                <ion-input type="text"></ion-input>
+                <ion-input [(ngModel)]="inputEmail"type="text"  ></ion-input>
             </ion-item>
     
             <ion-item>
                 <ion-label stacked> Location </ion-label>
-                <ion-input type="text"></ion-input>
+                <ion-input [(ngModel)]="inputLocation" type="text"></ion-input>
             </ion-item>
     
             <ion-item>
                 <ion-label stacked> Password </ion-label>
-                <ion-input type="text"></ion-input>
+                <ion-input [(ngModel)]="inputPassword" type="text" ></ion-input>
             </ion-item>
     
             <ion-item>
