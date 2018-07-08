@@ -19,6 +19,7 @@ export class RegistrationPage {
   createNewUser(firstName: string, lastName: string, email: string, location: string, password: string, isSubleaser: boolean) {
     //var user= createUser(firstName, lastName, email, password, location, isSubleaser);
 
+  
   }
   
 }
