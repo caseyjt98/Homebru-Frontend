@@ -1,15 +1,47 @@
 <ion-header>
-        <ion-navbar>
-         <ion-title>
-             Home        
-          </ion-title>
-          <ion-buttons end>
-              <button ion-button icon-only (click)="navigateToProfilePage()">
-                  <ion-icon name="md-person"></ion-icon>
-              </button>
-          </ion-buttons>
-        </ion-navbar>
-    </ion-header>
+
+    <ion-card> 
+
+            <ion-navbar> 
+
+                    <ion-title>
+                        Available Properties     
+                     </ion-title>
+                     <ion-buttons end>
+                         <button ion-button icon-only (click)="navigateToProfilePage()">
+                             <ion-icon name="md-person"></ion-icon>
+                         </button>
+                     </ion-buttons>
+
+            </ion-navbar>
+
+            <ion-row no-padding>
+                    <ion-col>
+                        <ion-item>
+                            <ion-input type="text" placeholder= "Location" ></ion-input>
+                        </ion-item>
+                    </ion-col>
+                
+                    <ion-col text-center>
+
+                        <ion-item>
+                                <ion-label>Price Range</ion-label>
+                                <ion-select [(ngModel)]="priceRange" interface="popover">
+                                        <ion-option ion-button value="minPrice">minimum </ion-option>
+                                        <ion-option ion-button value="maxPrice">maximum </ion-option>
+
+                
+                                </ion-select>
+                        </ion-item>
+                          
+                  
+                    </ion-col>
+            </ion-row>
+                                              
+    </ion-card>
+
+</ion-header>
+
     
     <ion-content>
         <p></p>
@@ -44,7 +76,6 @@
                 
                 </ion-card>
         
-    
        </ion-list>
     
     

@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar>
       <ion-title>
-        Welcome! Enter the following information:
+        Welcome! Login or Register Below.
       </ion-title>
     </ion-navbar>
   </ion-header>
@@ -15,7 +15,7 @@
         <ion-list>
       
           <ion-item>
-            <ion-input type="text" placeholder= "Email" ></ion-input>
+            <ion-input type="text" placeholder= "Email" [(ngModel)]="email"></ion-input>
           </ion-item>
       
           <ion-item>
@@ -35,5 +35,10 @@
         <button ion-button color="primary" block (click) = "navigateToLogin()">Log In</button>
         <button ion-button color="primary" block (click) = "navigateToRegistration()">Register</button>
       </div>
+
+
     
     </ion-content>
+
+
+

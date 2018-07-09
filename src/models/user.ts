@@ -19,15 +19,4 @@ export class User {
 
     constructor() {}
 
-    static createUser(first_name: string, last_name:string, email: string, password: string, location: string, isSubleaser: boolean): User {
-        var user = new User();
-        user.firstname= first_name;
-        user.lastname= last_name;
-        user.email= email;
-        user.password= password;
-        user.location= location;
-        user.isSubleaser= isSubleaser;
-        return user;
-    }
-
 }
