@@ -1,68 +1,3 @@
-<!--
-<ion-header>
-        <ion-navbar>
-          <ion-title>
-            Registration Page
-          </ion-title>
-        </ion-navbar>
-      </ion-header>
-      
-      <ion-content padding>
-          Please Register Below
-          
-        
-          <ion-item>
-                <ion-label>Are you a subleaser or a subletter? </ion-label>
-                    <ion-select [(ngModel)]="subleaserOrSubletter">
-                        <ion-option value="subletter" id = "subletterInput" > I'm looking for an apartment! </ion-option>
-                        <ion-option value="subleaser" id = "subleaserInput" > I'm leasing my apartment! </ion-option>
-                    </ion-select>
-                          
-         </ion-item>
-
-
-        <ion-list>
-
-            <ion-item>
-                <ion-label stacked> First Name </ion-label>
-                <ion-input [(ngModel)]="inputFirstName" type="text"></ion-input>
-            </ion-item>
-    
-            <ion-item>
-                <ion-label stacked> Last Name </ion-label>
-                <ion-input [(ngModel)]="inputLasttName" type="text" ></ion-input>
-            </ion-item>
-    
-            <ion-item>
-                <ion-label stacked> Email </ion-label>
-                <ion-input [(ngModel)]="inputEmail"type="text"  ></ion-input>
-            </ion-item>
-    
-            <ion-item>
-                <ion-label stacked> Location </ion-label>
-                <ion-input [(ngModel)]="inputLocation" type="text"></ion-input>
-            </ion-item>
-    
-            <ion-item>
-                <ion-label stacked> Password </ion-label>
-                <ion-input [(ngModel)]="inputPassword" type="text" ></ion-input>
-            </ion-item>
-    
-            <ion-item>
-                <ion-label stacked> Confirm Password </ion-label>
-                <ion-input type="text"></ion-input>
-            </ion-item>
-    
-        </ion-list>
-          
-        <ion-item>
-            <button ion-button (click)= "navigateToInterests()"> Finish </button> 
-        </ion-item>
-          
-    </ion-content>
-      
-
-    -->
     <ion-header>
         <ion-navbar>
          <ion-title>
@@ -73,102 +8,19 @@
 
     <ion-content> 
 
-            <ion-slides pager>
-
-                    <ion-slide>
-                        <h2> Are you a subleaser or a subletter? </h2>
+            <h2 padding text-center> Are you a subleaser or a subletter? </h2>
     
 
-                                <ion-list >
+            <ion-row>
+                <ion-col>
+                    <button ion-button (click) = "userIsSubletter()" text-lowercase float-md-left> I'm looking for an apartment! </button>
+                </ion-col>
 
-                                        <!-- <ion-item style = "background-color:  rgb(243, 199, 199)"> -->
-                                    
-                                        <ion-item>
-                                            <ion-label> I'm looking for an apartment! </ion-label>
-                                             <ion-checkbox color="dark" checked="false"></ion-checkbox>
-            
-                                       </ion-item>
-            
-                                        <ion-item>
-            
-                                            <ion-label> I'm leasing my apartment! </ion-label>
-                                            <ion-checkbox color = "dark" checked="false"></ion-checkbox>
-                                                
-                                        </ion-item>
-            
-                                  </ion-list>
-                   
-                      
-                  
-                        
-                    </ion-slide>
-                  
-                    <ion-slide>
-                      <h2>Enter your Information Below. </h2>
+                <ion-col>
+                        <button ion-button (click) = "userIsSubleaser()" text-lowercase float-md-right> I'm leasing my apartment! </button>
+                </ion-col>
 
-                     
-                        <ion-card>
-                                <ion-list>
-
-                                        <ion-item>
-                                            <ion-label stacked> First Name </ion-label>
-                                            <ion-input [(ngModel)]="inputFirstName" type="text"></ion-input>
-                                        </ion-item>
-                                
-                                        <ion-item>
-                                            <ion-label stacked> Last Name </ion-label>
-                                            <ion-input [(ngModel)]="inputLasttName" type="text" ></ion-input>
-                                        </ion-item>
-                                
-                                        <ion-item>
-                                            <ion-label stacked> Email </ion-label>
-                                            <ion-input [(ngModel)]="inputEmail"type="text"  ></ion-input>
-                                        </ion-item>
-                                
-                                        <ion-item>
-                                            <ion-label stacked> Location </ion-label>
-                                            <ion-input [(ngModel)]="inputLocation" type="text"></ion-input>
-                                        </ion-item>
-                                
-                                        <ion-item>
-                                            <ion-label stacked> Password </ion-label>
-                                            <ion-input [(ngModel)]="inputPassword" type="text" ></ion-input>
-                                        </ion-item>
-                                
-                                        <ion-item>
-                                            <ion-label stacked> Confirm Password </ion-label>
-                                            <ion-input type="text"></ion-input>
-                                        </ion-item>
-                                    </ion-list>
-                          
-
-                        </ion-card>
-                           
-                    </ion-slide>
-                  
-                    <ion-slide>
-                      <h2> Please select your location preference. </h2>
-
-                      <ion-list>
-
-                            <ion-item>
-                                <ion-label stacked> Location </ion-label>
-                                <ion-input [(ngModel)]="inputLocation" type="text"></ion-input>
-                            </ion-item>
-
-                            <ion-item>
-                                <div padding>
-                                        <button ion-button block (click) = "doConfirm()"> Use current location </button>
-                                </div>
-                                
-                            </ion-item>
-                        </ion-list>
-
-
-
-                    </ion-slide>
-                  
-                  </ion-slides>
+            </ion-row>            
 
     </ion-content>
          

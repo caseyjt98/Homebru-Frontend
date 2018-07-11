@@ -10,10 +10,11 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { RegistrationPage } from '../pages/registration/registration';
 import { ProfilePage } from '../pages/profile/profile';
-import { setInterestsPage } from '../pages/setInterests/setInterests';
 import { DetailsPage } from '../pages/details/details';
 import { PaymentPage } from '../pages/payment/payment';
 import { PaymentHistoryPage } from '../pages/payment-history/payment-history';
+import { Registration2Page } from '../pages/registration2/registration2';
+import { Registration3Page } from '../pages/registration3/registration3';
 
 @NgModule({
   declarations: [
@@ -22,10 +23,11 @@ import { PaymentHistoryPage } from '../pages/payment-history/payment-history';
     LoginPage,
     RegistrationPage,
     ProfilePage,
-    setInterestsPage,
     DetailsPage,
     PaymentPage,
-    PaymentHistoryPage
+    PaymentHistoryPage,
+    Registration2Page,
+    Registration3Page
   ],
   imports: [
     BrowserModule,
@@ -39,10 +41,11 @@ import { PaymentHistoryPage } from '../pages/payment-history/payment-history';
     LoginPage,
     RegistrationPage,
     ProfilePage,
-    setInterestsPage,
     DetailsPage,
     PaymentPage,
-    PaymentHistoryPage
+    PaymentHistoryPage,
+    Registration2Page,
+    Registration3Page
   ],
   providers: [
     StatusBar,
