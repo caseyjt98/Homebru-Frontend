@@ -1,13 +1,11 @@
 page-add-product {
-    $grid-breakpoints: (
-        sm: 0,
-        md: 768px,
-        lg: 1024px
-      );
-      
-      $grid-max-widths: (
-        sm: 420px,
-        md: 720px,
-        lg: 960px
-      );
-}
+    #input {
+        background-color: #cecfd170;
+        border: 1px solid #e6e9ee;
+        border-radius: 2px;
+        padding: 5px;
+        text-align: center;
+      }
+    }
+
+

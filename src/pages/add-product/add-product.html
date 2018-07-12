@@ -15,44 +15,72 @@
 <ion-content padding> 
                      
     <ion-card>
-            <ion-list>
-    
-                    <ion-item>
-                        <ion-label stacked> Address </ion-label>
-                        <ion-input [(ngModel)]="address_number" type="number"></ion-input>  
-                    </ion-item>
-            
-                    <ion-item>
-                        <ion-label stacked> City </ion-label>
-                        <ion-input [(ngModel)]="city" type="text"></ion-input> 
-                    </ion-item>
+                        <ion-title padding> Address </ion-title>
 
-                    <ion-item>
-                        <ion-label stacked> Zip Code </ion-label>
-                        <ion-input [(ngModel)]="zip_code" type="text"></ion-input> 
-                    </ion-item>
-        
-              </ion-list>
-                  
-    </ion-card>
-      <ion-title> Please enter the following information about your apartment </ion-title>
-      <ion-grid fixed>
-        <ion-row>
-          <ion-col col-2 padding>
-            # bathrooms
-          </ion-col>
+                        <ion-grid fixed>
 
-          <ion-col col-2>
-            <ion-input type = "number" clearInput></ion-input>
-          </ion-col>
+                          <ion-row row-auto>
+                              <ion-col col-auto padding>
+                                  <ion-input id = "input" [(ngModel)]="address_number" type = "string" placeholder = "Address Number"></ion-input>
+                                </ion-col>
+                              </ion-row>
 
-        </ion-row>
-      </ion-grid>
-   
+                            <ion-row row-auto>
+                              <ion-col col-auto padding>
+                                  <ion-input id = "input" [(ngModel)]="street_name" type = "string" placeholder = "Street Name"></ion-input>
+                              </ion-col>
+                            </ion-row>
 
-    <ion-card padding>
-      <ion-title> Please briefly describe any relevant details of your living situation below </ion-title>
-      <ion-input [(ngModel)]= "details" type= "string" ></ion-input> 
-    </ion-card>
+                          <ion-row row-auto>
+                              <ion-col col-auto padding>
+                                  <ion-input id = "input" [(ngModel)]="city" type = "string" placeholder = "City"></ion-input>
+                              </ion-col>
+                          </ion-row>
+
+                          <ion-row row-auto>
+                              <ion-col col-auto padding>
+                                  <ion-input id = "input" [(ngModel)]= "zip_code" type = "string" placeholder = "Zip Code"></ion-input>
+                              </ion-col>
+                          </ion-row>
+
+                        </ion-grid>     
+          
+  </ion-card>
+
+
+  <ion-card>
+
+      <ion-title padding> Details </ion-title>
+
+          <ion-grid fixed>
+
+              <ion-row row-auto>
+                  <ion-col col-auto padding>
+                      <ion-input id = "input" type = "number" placeholder = "# residents"></ion-input>
+                  </ion-col>
+              </ion-row>
+
+              <ion-row row-auto>
+                  <ion-col col-auto padding>
+                      <ion-input id = "input" type = "number" placeholder = "# bathrooms"></ion-input>
+                    </ion-col>
+                  </ion-row>
+
+                <ion-row row-auto>
+                  <ion-col col-auto padding>
+                      <ion-input id = "input" type = "number" placeholder = "# bedrooms"></ion-input>
+                  </ion-col>
+                </ion-row>
+
+            </ion-grid>     
+
+  </ion-card>
+
+
+  
+  <ion-card>
+      <ion-title padding> Additional information </ion-title>
+          <ion-input padding id = "input" [(ngModel)]= "details" type= "string" placeholder = "Add additional information here..."></ion-input> 
+  </ion-card>
 
     </ion-content>
