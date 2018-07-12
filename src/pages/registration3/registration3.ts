@@ -25,15 +25,15 @@ export class Registration3Page {
   lastname: string;
   email: string;
   password: string;
-  isSubleaser: boolean;
+  is_subleaser: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public alerCtrl: AlertController, public http: Http) {
     this.firstname= navParams.get('firstname');
     this.lastname = navParams.get('lastname');
     this.email = navParams.get('email');
     this.password = navParams.get('password');
-    this.isSubleaser = navParams.get('isSubleaser');
-    console.log("user status on reg3 is: " + this.isSubleaser);
+    this.is_subleaser = navParams.get('isSubleaser');
+    console.log("user status on reg3 is: " + this.is_subleaser);
     console.log("user first name on reg3 is :" + this.firstname);
     console.log("user last name on reg3 is :" + this.lastname);
     console.log("user email on reg3 is :" + this.email);
@@ -48,7 +48,7 @@ export class Registration3Page {
     user.last_name = this.lastname,
     user.email = this.email,
     user.password = this.password,
-    user.is_subleaser = this.isSubleaser
+    user.is_subleaser = this.is_subleaser
 
     console.log("user created for registration");
 
@@ -90,7 +90,7 @@ export class Registration3Page {
             console.log('Agree clicked');
             this.register();
 
-            if (this.isSubleaser == false) {
+            if (this.is_subleaser == false) {
               this.navigateToLogin();
             }
 
@@ -105,7 +105,7 @@ export class Registration3Page {
           handler: () => {
             console.log('Disagree clicked');
             this.register();
-            if (this.isSubleaser == false) {
+            if (this.is_subleaser == false) {
               this.navigateToLogin();
             }
             else {

@@ -38,15 +38,11 @@ export class HomePage {
       );
 
     }
-
     /**  
     this.http.get('https://www.reddit.com/r/gifs/new/.json?limit=10').map(res => res.json()).subscribe(data => {
         //this.posts = data.data.children;
     });
 */
-
-
-    
  
   }
 
@@ -58,8 +54,6 @@ export class HomePage {
 
     this.navCtrl.push(LoginPage); 
   }
-
-
 
   login() {
     this.http
@@ -77,25 +71,25 @@ export class HomePage {
       localStorage.setItem("TOKEN",token);
 
       let t = localStorage.getItem("TOKEN");
+
+      this.navigateToLogin();
     },
     err => {
       console.log(err);
+      alert("Failed to login");
     }
   );
 
-  this.navigateToLogin();
   }
 
 
-  
+
   navigateToRegistration() {
 
     console.log("Navigating...")
 
     this.navCtrl.push(RegistrationPage);
   }
-
-  //make a function to create instance of user?
   
   
 }

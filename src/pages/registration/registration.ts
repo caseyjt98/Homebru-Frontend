@@ -29,11 +29,6 @@ export class RegistrationPage {
     this.navigateToRegistration2Page(this.is_subleaser);
   }
 
-  comparePasswords(password1:string, password2: string): boolean {
-    if (password1 == password2) return true;
-    else return false;
-  }
-
   navigateToRegistration2Page(is_subleaser: boolean) {
     console.log("navigating...");
     this.navCtrl.push(Registration2Page, {

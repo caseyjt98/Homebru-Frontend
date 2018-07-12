@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { PaymentHistoryPage} from '../payment-history/payment-history';
-import { LoginPage } from '../login/login';
-import { MyApp } from '../../app/app.component'
+import { User } from '../../models/user';
 
 @Component({
   selector: 'page-profile',
@@ -11,15 +10,16 @@ import { MyApp } from '../../app/app.component'
 })
 export class ProfilePage {
 
-  //rootPage: any= ProfilePage;
+ // public user: User;
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController) {
+   
+  }
 
   logout() {
 
     this.navCtrl.setRoot(HomePage);
     console.log("Logging out...");
-    //MyApp.rootPage= HomePage;
   }
 
   navigateToPaymentHistory() {
