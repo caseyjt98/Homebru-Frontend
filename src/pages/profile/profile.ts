@@ -27,6 +27,8 @@ export class ProfilePage {
         response => {
           let result = response.json();
           this.email= result.email;
+          this.first_name= result.first_name;
+          this.last_name= result.last_name;
         },
 
         err => {

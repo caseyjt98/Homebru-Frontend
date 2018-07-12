@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Property } from '../models/property';
+//import { Property } from '../models/property';
 
 @Component({
   selector: 'page-models',
