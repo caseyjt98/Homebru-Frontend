@@ -33,6 +33,7 @@ export class Registration2Page {
     //let strong: boolean= this.checkPasswordStrength(password);
     if (match) {
       
+  
     
         this.navCtrl.push(Registration3Page, {
           first_name: first_name,
@@ -59,8 +60,7 @@ export class Registration2Page {
     }
   }
 
-  /**
-  
+  /** 
   checkPasswordStrength(password: string): boolean {
     if (password.length < 8) {
       alert("Password must be at least 8 characters");
@@ -78,7 +78,8 @@ export class Registration2Page {
   
     return true;
   }
+  */
 
- */
+
 
 }

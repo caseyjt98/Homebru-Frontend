@@ -20,13 +20,17 @@ export class ProfilePage {
     if (!t) {
       // nav to login if token is invalid
       this.navCtrl.setRoot(HomePage);
+      console.log("invalid token");
     }
 
     this.http.get("http://localhost:3000/verify?jwt=" + t)
       .subscribe(
         response => {
           let result = response.json();
-          this.email= result.email;
+          this.email= result.user.email;
+          this.first_name= result.user.first_name;
+          this.last_name= result.user.last_name;
+         
         },
 
         err => {
@@ -45,6 +49,11 @@ export class ProfilePage {
   navigateToPaymentHistory() {
     console.log('navigating...')
     this.navCtrl.push(PaymentHistoryPage);
+  }
+
+  editProfile() {
+    //edit profile??
+    console.log("editing profile...");
   }
   
 }
