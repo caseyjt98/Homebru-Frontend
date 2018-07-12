@@ -10,7 +10,6 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { RegistrationPage } from '../pages/registration/registration';
 import { ProfilePage } from '../pages/profile/profile';
-import { setInterestsPage } from '../pages/setInterests/setInterests';
 import { DetailsPage } from '../pages/details/details';
 import { PaymentHistoryPage } from '../pages/payment-history/payment-history';
 
@@ -21,7 +20,6 @@ import { PaymentHistoryPage } from '../pages/payment-history/payment-history';
     LoginPage,
     RegistrationPage,
     ProfilePage,
-    setInterestsPage,
     DetailsPage,
     PaymentHistoryPage
   ],
@@ -37,7 +35,6 @@ import { PaymentHistoryPage } from '../pages/payment-history/payment-history';
     LoginPage,
     RegistrationPage,
     ProfilePage,
-    setInterestsPage,
     DetailsPage,
     PaymentHistoryPage
   ],

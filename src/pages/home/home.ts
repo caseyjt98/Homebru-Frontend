@@ -20,20 +20,31 @@ export class HomePage {
   email: string;
   password: string;
 
-  constructor(public navCtrl: NavController, public http: Http) {
+  constructor(public navCtrl: NavController, private http: Http) {
+
  
+    if (localStorage.getItem("TOKEN")) {
+      alert("Already logged in");
+    
+      this.http.get("http://localhost:3000/verify?jwt=" + localStorage.getItem("TOKEN")).subscribe(
+        result => {
+          console.log(result.json());
+        },
+  
+        err => {
+          // Invalid, login!
+        }
+      );
+
+    }
+
     this.http.get('https://www.reddit.com/r/gifs/new/.json?limit=10').map(res => res.json()).subscribe(data => {
         this.posts = data.data.children;
     });
+
  
   }
   /** link this function to our Log In button to make it do something */
-  navigateToLogin() {
- 
-    console.log("Navigating...") 
-
-    this.navCtrl.push(LoginPage); 
-  }
 
   navigateToRegistration() {
 
@@ -42,8 +53,6 @@ export class HomePage {
     this.navCtrl.push(RegistrationPage);
   }
 
-  //make a function to create instance of user?
-  
 
   login() {
     this.http
@@ -68,6 +77,11 @@ export class HomePage {
           console.log(err);
         }
       );
-  }
+
+      console.log("Navigating...");
+      this.navCtrl.push(LoginPage); 
+    }
+
+    
   
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { Property } from '../models/property';
 
 @Component({
   selector: 'page-models',
@@ -8,10 +9,13 @@ import { NavController, NavParams } from 'ionic-angular';
 
 export class User {
 
-    public firstname: string;
-    public lastname: string;
+    //User's saved properties
+    //public savedProperties: Array<Property> =[];
+  
+    public first_name: string;
+    public last_name: string;
     public gender: string;
-    public userId: number;
+    public id: number;
     public email: string;
     public password: string;
     public location: string;

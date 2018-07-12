@@ -12,6 +12,8 @@ export class LoginPage {
 
     public listings: Array<Property> = [];
 
+    buttonColor: string= 'clear'; //Default button color
+
   constructor(public navCtrl: NavController) {
 
     var property1 = new Property("638 Landfair Avenue", "10 person apartment, 5 bedrooms, 4 bathrooms", "details","https://scontent-jnb1-1.xx.fbcdn.net/v/t1.0-9/s720x720/35884124_1801083623268238_2366583428851171328_o.jpg?_nc_cat=0&oh=85f1c805638b6c54f26528e06194d463&oe=5B9F49CF", 800, "Kiana Mills" , 9253239578);
@@ -35,6 +37,14 @@ export class LoginPage {
     this.navCtrl.push(DetailsPage, {
         currProperty: property
     });
+  }
+
+  changeSaveButtonColor() {
+    this.buttonColor= '#AEAAAA';
+  }
+
+  addToSavedProperties() {
+    
   }
 
   

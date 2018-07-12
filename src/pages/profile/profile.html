@@ -8,9 +8,14 @@
       
       <ion-content padding center>
           
-        
-        
+        <div class="round-button"><div class="round-button-circle"> 
+          <ion-icon center name="ios-contact-outline" default id= "profileImg"> </ion-icon>
+          </div>
+        </div>
+      
             <ion-icon center name="ios-contact-outline" default id= "profileImg"> </ion-icon>
+         
+
             <button ion-button round color="light" icon-only id= "addProfilePic" ><ion-icon name="add" small  ></ion-icon> </button>
         
           <div padding>
@@ -20,6 +25,9 @@
                 </ion-segment-button>
                 <ion-segment-button value="payments" id= "payment">
                   Payments
+                </ion-segment-button>
+                <ion-segment-button value="saved" id= "savedlist">
+                  Saved Properties
                 </ion-segment-button>
                 <ion-segment-button value="messages" id= "mailbox">
                     <ion-icon name="mail"></ion-icon>
@@ -48,10 +56,26 @@
 
 
              <div padding>
-               <button ion-button  (click)= "navigateToHome()"> Log Out </button>
+               <button ion-button  (click)= "logout()"> Log Out </button>
                </div>
               </ion-list>
-             
+
+              <div *ngSwitchCase= "savedlist">
+              <ion-list *ngFor= "let property of savedProperties">
+                <ion-card>
+                  <img src = {{property.image}}
+                  style = "width:450px;height:300px;"/>
+                  <ion-card-title>
+                      {{property.address}}
+                  </ion-card-title>
+                  <p>
+                      {{property.description}}
+                  </p>
+              
+              </ion-card>
+              </ion-list>
+            </div>
+            
             
               <ion-list *ngSwitchCase="'messages'">
                 <ion-item>
@@ -68,7 +92,7 @@
                   <button ion-button block color = "dark"> Set up a Renewing Payment Plan   
                       <ion-icon end ios="ios-add-circle" md="md-add-circle"></ion-icon>
                     </button>
-                  </ion-item>
+                </ion-item>
                   
                 <ion-item>
                     <button ion-button block color = "dark"> Set up a One-time Payment Plan   

@@ -121,12 +121,7 @@
                                 
                                         <ion-item>
                                             <ion-label stacked> Email </ion-label>
-                                            <ion-input [(ngModel)]="email"type="text"  ></ion-input>
-                                        </ion-item>
-                                
-                                        <ion-item>
-                                            <ion-label stacked> Location </ion-label>
-                                            <ion-input [(ngModel)]="location" type="text"></ion-input>
+                                            <ion-input [(ngModel)]="email"  type="text"  ></ion-input>
                                         </ion-item>
                                 
                                         <ion-item>
@@ -136,9 +131,14 @@
                                 
                                         <ion-item>
                                             <ion-label stacked> Confirm Password </ion-label>
-                                            <ion-input type="text"></ion-input>
+                                            <ion-input [(ngModel)]= "confirmedpassword" type="text" ></ion-input>
+                                        </ion-item>
+
+                                        <ion-item>
+                                            <button ion-button (click)= "register()"> Register </button>
                                         </ion-item>
                                     </ion-list>
+
                           
 
                         </ion-card>
@@ -152,7 +152,7 @@
 
                             <ion-item>
                                 <ion-label stacked> Location </ion-label>
-                                <ion-input [(ngModel)]="inputLocation" type="text"></ion-input>
+                                <ion-input [(ngModel)]="location" type="text"></ion-input>
                             </ion-item>
 
                             <ion-item>
