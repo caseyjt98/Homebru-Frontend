@@ -12,6 +12,8 @@ import { RegistrationPage } from '../pages/registration/registration';
 import { ProfilePage } from '../pages/profile/profile';
 import { DetailsPage } from '../pages/details/details';
 import { PaymentHistoryPage } from '../pages/payment-history/payment-history';
+import { Registration2Page } from '../pages/registration2/registration2';
+import { Registration3Page } from '../pages/registration3/registration3';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { PaymentHistoryPage } from '../pages/payment-history/payment-history';
     RegistrationPage,
     ProfilePage,
     DetailsPage,
-    PaymentHistoryPage
+    PaymentHistoryPage,
+    Registration2Page,
+    Registration3Page
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,9 @@ import { PaymentHistoryPage } from '../pages/payment-history/payment-history';
     RegistrationPage,
     ProfilePage,
     DetailsPage,
-    PaymentHistoryPage
+    PaymentHistoryPage,
+    Registration2Page,
+    Registration3Page
   ],
   providers: [
     StatusBar,

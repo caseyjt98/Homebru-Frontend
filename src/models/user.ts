@@ -21,6 +21,8 @@ export class User {
     public location: string;
     public isSubleaser: boolean;
 
-    constructor() {}
+    constructor() {
+        this.isSubleaser = false;        // false by default, will change upon registration
+    }
 
 }

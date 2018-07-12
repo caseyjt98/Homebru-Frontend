@@ -2,6 +2,7 @@
 
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Registration2Page } from '../registration2/registration2';
 import { User } from '../../models/user';
 import { AlertController } from 'ionic-angular';
 import { Http } from '@angular/http';
@@ -14,59 +15,22 @@ import { Http } from '@angular/http';
 
 export class RegistrationPage {
 
-  private firstname: string;
-  private lastname: string;
-  private email: string;
-  private password: string;
-  private confirmedpassword: string;
-  private location: string;
   private isSubleaser: boolean;
 
-  constructor(public navCtrl: NavController, public alerCtrl: AlertController, public http: Http) {}
+  constructor(public navCtrl: NavController) {}
 
- 
-  //Registers new user by calling a post to our backend 
-  async register() {
+  
+  userIsSubleaser() {
+    this.isSubleaser = true;
+    console.log('Users new state:' + this.isSubleaser);
+    this.navigateToRegistration2Page(this.isSubleaser);
+  }
 
-    var matched= this.comparePasswords(this.password, this.confirmedpassword);
-      if (!matched) {
-        alert("Passwords do not match");
-      }
-      else { 
-
-        var user= new User();
- 
-        user.first_name = this.firstname,
-        user.last_name= this.lastname,
-        user.email= this.email,
-        user.password= this.password;
-        user.location= this.location,
-        user.isSubleaser= this.isSubleaser
-
-        //Post will not occur without a .subscribe, which tells what to do if post is successful 
-        // and what to do if it is not
-      this.http.post("http://localhost:3000/registration", user)
-      .subscribe(
-        result=> {
-          console.log(result);
-          var jwtResponse= result.json();
-          var token= jwtResponse.tokem;
-
-          localStorage.setItem("TOKEN", token);
-
-          let t = localStorage.getItem("TOKEN");
-        }, 
-        err=> {
-          //Invalid registration!!
-          console.log(err);
-        }
-      )
-
-      }
-      console.log("Post sent for Registration");
-      
-    }
-
+  userIsSubletter() {
+    this.isSubleaser = false;
+    console.log('Users new state:' + this.isSubleaser);
+    this.navigateToRegistration2Page(this.isSubleaser);
+  }
 
     comparePasswords(password1: string, password2: string): boolean {
 
@@ -75,26 +39,12 @@ export class RegistrationPage {
       
     }
 
-  doConfirm() {
-    let confirm = this.alerCtrl.create ( {
-      title: 'Allow location access?',
-      message: 'Allow access to your current location while using the app?',
-      buttons: [
-        {
-          text: 'Agree',
-          handler: () => {
-            console.log('Agree clicked');
-          }
-        },
-        {
-          text: 'Disagree',
-          handler: () => {
-            console.log('Disagree clicked');
-          }
-        }
-      ]
+  navigateToRegistration2Page(isSubleaser: boolean) {
+    console.log("navigating...");
+    this.navCtrl.push(Registration2Page, {
+        isSubleaser: isSubleaser
     });
-    confirm.present()
   }
+
 }
 

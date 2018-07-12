@@ -72,10 +72,7 @@
 
     <ion-content> 
 
-            <ion-slides pager>
-
-                    <ion-slide>
-                        <h2> Are you a subleaser or a subletter? </h2>
+            <h2 padding text-center> Are you a subleaser or a subletter? </h2>
     
 
                                 <ion-list >
@@ -164,10 +161,11 @@
                         </ion-list>
 
 
+                <ion-col>
+                        <button ion-button (click) = "userIsSubleaser()" text-lowercase float-md-right> I'm leasing my apartment! </button>
+                </ion-col>
 
-                    </ion-slide>
-                  
-                  </ion-slides>
+            </ion-row>            
 
     </ion-content>
          

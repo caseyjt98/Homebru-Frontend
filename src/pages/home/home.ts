@@ -1,4 +1,5 @@
 
+
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login'; 
@@ -22,7 +23,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, private http: Http) {
 
- 
+
     if (localStorage.getItem("TOKEN")) {
       alert("Already logged in");
     
@@ -38,20 +39,26 @@ export class HomePage {
 
     }
 
+    /**  
     this.http.get('https://www.reddit.com/r/gifs/new/.json?limit=10').map(res => res.json()).subscribe(data => {
-        this.posts = data.data.children;
+        //this.posts = data.data.children;
     });
+*/
 
+
+    
  
   }
-  /** link this function to our Log In button to make it do something */
 
-  navigateToRegistration() {
+  //link this function to our Log In button to make it do something 
+  
+  navigateToLogin() {
+ 
+    console.log("Navigating...") 
 
-    console.log("Navigating...")
-
-    this.navCtrl.push(RegistrationPage);
+    this.navCtrl.push(LoginPage); 
   }
+
 
 
   login() {
@@ -59,29 +66,36 @@ export class HomePage {
       .post("http://localhost:3000/login", {
         email: this.email,
         password: this.password
-      })
-      .subscribe(
-        result=> {
-          console.log(result);
+  })
+  .subscribe (
+    result => { 
+      console.log(result);
 
-          var jwtResponse= result.json();
-          var token= jwtResponse.tokem;
+      var jwtResponse = result.json();
+      var token = jwtResponse.token;
 
-          localStorage.setItem("TOKEN", token);
+      localStorage.setItem("TOKEN",token);
 
-          let t = localStorage.getItem("TOKEN");
-        },
-
-        err => {
-          //Invalid login!!
-          console.log(err);
-        }
-      );
-
-      console.log("Navigating...");
-      this.navCtrl.push(LoginPage); 
+      let t = localStorage.getItem("TOKEN");
+    },
+    err => {
+      console.log(err);
     }
+  );
 
-    
+  this.navigateToLogin();
+  }
+
+
+  
+  navigateToRegistration() {
+
+    console.log("Navigating...")
+
+    this.navCtrl.push(RegistrationPage);
+  }
+
+  //make a function to create instance of user?
+  
   
 }
