@@ -39,7 +39,7 @@ export class Registration3Page {
   }
 
 // register new user by calling post to our backend
-  async register () {
+  register () {
 
     var user = new User();
     user.firstname= this.firstname,
@@ -48,12 +48,35 @@ export class Registration3Page {
     user.password = this.password,
     user.isSubleaser = this.isSubleaser
 
-  this.http.post ("http://localhost:3000/register", user) 
+    console.log("user created for registration");
+
+    this.http.post("http://localhost:3000/registration", user)
+    .subscribe(
+      result => {
+        // This will run when registration succeeded
+        // navigate to home, pass in jwt 
+        // this.navCtrl.push()
+        console.log(result);
+
+        var jwtResponse = result.json();
+        var token = jwtResponse.token;
+  
+        localStorage.setItem("TOKEN",token);
+  
+        let t = localStorage.getItem("TOKEN");
+      },
+
+      err => {
+        // This will run when registration failed
+        // pop up alert?
+        console.log(err);
+      }
+    )
+
+    console.log("post request sent");
+
   }
   
-
-
-
   doConfirm() {
     let confirm = this.alerCtrl.create ( {
       title: 'Allow location access?',
@@ -63,6 +86,7 @@ export class Registration3Page {
           text: 'Agree',
           handler: () => {
             console.log('Agree clicked');
+            this.register();
           }
         },
         {
@@ -74,6 +98,9 @@ export class Registration3Page {
       ]
     });
     confirm.present()
+
+    // once confirmed, registraton process is done -- make post call to backend
+    
   }
 
 
