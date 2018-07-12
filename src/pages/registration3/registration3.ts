@@ -91,7 +91,7 @@ export class Registration3Page {
             console.log('Agree clicked');
             this.register();
 
-            if (this.isSubleaser == false) {
+            if (this.is_subleaser == false) {
               this.navigateToLogin();
             }
 
@@ -106,7 +106,7 @@ export class Registration3Page {
           handler: () => {
             console.log('Disagree clicked');
             this.register();
-            if (this.isSubleaser == false) {
+            if (this.is_subleaser == false) {
               this.navigateToLogin();
             }
             else {

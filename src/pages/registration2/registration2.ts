@@ -25,20 +25,34 @@ export class Registration2Page {
   }
 
 
-  navigateToRegistration3Page(first_name: string, last_name: string, email: string, password: string, is_subleaser: boolean) {
+  navigateToRegistration3Page(first_name: string, last_name: string, email: string, password: string, password2: string) {
     console.log("navigating...");
-    this.navCtrl.push(Registration3Page, {
-        first_name: first_name,
-        last_name: last_name,
-        email: email,
-        password: password,
-        is_subleaser: this.is_subleaser
 
-    });
+    //Compare passwords
+    let match: boolean= this.comparePasswords(password, password2);
+    if (match) {
+    
+      this.navCtrl.push(Registration3Page, {
+         first_name: first_name,
+          last_name: last_name,
+          email: email,
+         password: password,
+          is_subleaser: this.is_subleaser
+
+      });
+    }
+    else {
+      alert ("Passwords do not match");
+    }
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Registration2Page');
+  }
+
+  comparePasswords(password1:string, password2: string): boolean {
+    if (password1 == password2) return true;
+    else return false;
   }
 
 }

@@ -38,8 +38,8 @@
             <div [ngSwitch]="profile">
               <ion-list *ngSwitchCase="'editprofile'">
                 <ion-item>
-                    <ion-label> First Name </ion-label>
-                    <ion-input type="text"></ion-input>
+                    {{ user.first_name }}
+                    
                 </ion-item>
                 <ion-item>
                     <ion-label> Last Name </ion-label>
