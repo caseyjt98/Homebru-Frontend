@@ -16,23 +16,23 @@ import { Registration3Page } from '../registration3/registration3';
 export class Registration2Page {
 
 
-  isSubleaser: boolean;
+  is_subleaser: boolean;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.isSubleaser= navParams.get('isSubleaser');
-    console.log("User status is: " + this.isSubleaser);
+    this.is_subleaser= navParams.get('is_subleaser');
+    console.log("User status is: " + this.is_subleaser);
   }
 
 
-  navigateToRegistration3Page(firstname: string, lastname: string, email: string, password: string, isSubleaser: boolean) {
+  navigateToRegistration3Page(first_name: string, last_name: string, email: string, password: string, is_subleaser: boolean) {
     console.log("navigating...");
     this.navCtrl.push(Registration3Page, {
-        firstname: firstname,
-        lastname: lastname,
+        first_name: first_name,
+        last_name: last_name,
         email: email,
         password: password,
-        isSubleaser: this.isSubleaser
+        is_subleaser: this.is_subleaser
 
     });
   }

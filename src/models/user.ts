@@ -19,10 +19,10 @@ export class User {
     public email: string;
     public password: string;
     public location: string;
-    public isSubleaser: boolean;
+    public is_subleaser: boolean;
 
     constructor() {
-        this.isSubleaser = false;        // false by default, will change upon registration
+        this.is_subleaser = false;        // false by default, will change upon registration
     }
 
 }

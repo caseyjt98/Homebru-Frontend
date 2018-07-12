@@ -12,21 +12,21 @@ import { Registration2Page } from '../registration2/registration2';
 
 export class RegistrationPage {
 
-  private isSubleaser: boolean;
+  private is_subleaser: boolean;
 
   constructor(public navCtrl: NavController) {}
 
   
   userIsSubleaser() {
-    this.isSubleaser = true;
-    console.log('Users new state:' + this.isSubleaser);
-    this.navigateToRegistration2Page(this.isSubleaser);
+    this.is_subleaser = true;
+    console.log('Users new state:' + this.is_subleaser);
+    this.navigateToRegistration2Page(this.is_subleaser);
   }
 
   userIsSubletter() {
-    this.isSubleaser = false;
-    console.log('Users new state:' + this.isSubleaser);
-    this.navigateToRegistration2Page(this.isSubleaser);
+    this.is_subleaser = false;
+    console.log('Users new state:' + this.is_subleaser);
+    this.navigateToRegistration2Page(this.is_subleaser);
   }
 
   comparePasswords(password1:string, password2: string): boolean {
@@ -34,11 +34,11 @@ export class RegistrationPage {
     else return false;
   }
 
-  navigateToRegistration2Page(isSubleaser: boolean) {
+  navigateToRegistration2Page(is_subleaser: boolean) {
     console.log("navigating...");
     this.navCtrl.push(Registration2Page, {
-        isSubleaser: isSubleaser
-    });
+        is_subleaser: is_subleaser
+   });
   }
 
 }
