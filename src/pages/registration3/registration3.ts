@@ -21,21 +21,21 @@ import { AddProductPage } from '../add-product/add-product';
 })
 export class Registration3Page {
 
-  first_name: string;  
-  last_name: string;  
+  firstname: string;
+  lastname: string;
   email: string;
   password: string;
-  is_subleaser: boolean;
+  isSubleaser: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public alerCtrl: AlertController, public http: Http) {
-    this.first_name= navParams.get('first_name');
-    this.last_name = navParams.get('last_name');
+    this.firstname= navParams.get('firstname');
+    this.lastname = navParams.get('lastname');
     this.email = navParams.get('email');
     this.password = navParams.get('password');
-    this.is_subleaser = navParams.get('is_subleaser');
-    console.log("user status on reg3 is: " + this.is_subleaser);
-    console.log("user first name on reg3 is :" + this.first_name);
-    console.log("user last name on reg3 is :" + this.last_name);
+    this.isSubleaser = navParams.get('isSubleaser');
+    console.log("user status on reg3 is: " + this.isSubleaser);
+    console.log("user first name on reg3 is :" + this.firstname);
+    console.log("user last name on reg3 is :" + this.lastname);
     console.log("user email on reg3 is :" + this.email);
     console.log("user password on reg3 is :" + this.password);
   }
@@ -44,11 +44,11 @@ export class Registration3Page {
   register () {
 
     var user = new User();
-    user.first_name= this.first_name,
-    user.last_name = this.last_name,
+    user.first_name= this.firstname,
+    user.last_name = this.lastname,
     user.email = this.email,
     user.password = this.password,
-    user.is_subleaser = this.is_subleaser
+    user.is_subleaser = this.isSubleaser
 
     console.log("user created for registration");
 
@@ -71,7 +71,6 @@ export class Registration3Page {
       err => {
         // This will run when registration failed
         // pop up alert?
-        alert("Registration failed");
         console.log(err);
       }
     )

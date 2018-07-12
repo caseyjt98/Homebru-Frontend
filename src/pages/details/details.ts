@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Property } from '../../models/property';
+import { Product } from '../../models/product';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { Property } from '../../models/property';
 })
 export class DetailsPage {
 
-  public currProperty: Property;
+  public currProperty: Product;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.currProperty= navParams.get('currProperty');
