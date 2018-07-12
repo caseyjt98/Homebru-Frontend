@@ -32,12 +32,10 @@ export class RegistrationPage {
     this.navigateToRegistration2Page(this.isSubleaser);
   }
 
-    comparePasswords(password1: string, password2: string): boolean {
-
-      if (password1== password2) return true;
-      else  return false;
-      
-    }
+  comparePasswords(password1:string, password2: string): boolean {
+    if (password1 == password2) return true;
+    else return false;
+  }
 
   navigateToRegistration2Page(isSubleaser: boolean) {
     console.log("navigating...");
