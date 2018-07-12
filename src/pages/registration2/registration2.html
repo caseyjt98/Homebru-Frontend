@@ -7,13 +7,10 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>registration2</ion-title>
+    <ion-title> Enter your information below </ion-title>
   </ion-navbar>
 
 </ion-header>
-
-
-<h2>Enter your Information Below. </h2>
 
 <ion-content padding> 
                      
@@ -53,7 +50,7 @@
 </ion-card>
 
 
-    <button ion-button clear small color="danger" icon-start (click)= "navigateToRegistration3Page(first_name, last_name, email, password, password2)">
+    <button ion-button clear id = "next-button" small icon-start (click)= "navigateToRegistration3Page(first_name, last_name, email, password, password2)">
         <ion-icon name='share-alt'></ion-icon>   Next   </button>
 
 

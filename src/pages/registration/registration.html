@@ -8,14 +8,14 @@
 
     <ion-content>   
 
-        <ion-title padding text-center> Are you a subletter or a subleaser? </ion-title>
+        <ion-title padding text-center id = "my-title"> Are you a subletter or a subleaser? </ion-title>
             <ion-row>
                 <ion-col>
-                    <button ion-button (click) = "userIsSubletter()" text-lowercase float-md-left> I'm looking for an apartment! </button>
+                    <button ion-button id = "round-button"(click) = "userIsSubletter()" text-lowercase float-md-left> I'm looking <br> for an apartment! <br> </button>
                 </ion-col>
 
                 <ion-col>
-                        <button ion-button (click) = "userIsSubleaser()" text-lowercase float-md-right> I'm leasing my apartment! </button>
+                        <button ion-button id = "round-button" (click) = "userIsSubleaser()" text-lowercase float-md-right> I'm leasing <br> my apartment! <br> </button>
                 </ion-col>
 
             </ion-row>            

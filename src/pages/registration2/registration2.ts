@@ -30,10 +30,9 @@ export class Registration2Page {
 
     //Compare passwords
     let match: boolean= this.comparePasswords(password, password2);
-    let strong: boolean= this.checkPasswordStrength(password);
+    //let strong: boolean= this.checkPasswordStrength(password);
     if (match) {
       
-      if (strong) {
     
         this.navCtrl.push(Registration3Page, {
           first_name: first_name,
@@ -43,7 +42,7 @@ export class Registration2Page {
            is_subleaser: this.is_subleaser
 
         });
-      }
+      
     }
   
   }
@@ -60,19 +59,26 @@ export class Registration2Page {
     }
   }
 
+  /**
+  
   checkPasswordStrength(password: string): boolean {
     if (password.length < 8) {
       alert("Password must be at least 8 characters");
       return false;
     }
 
+   
+
+ 
     //Check if at least one uppercase
-    /** 
+    
     for (var i=0; i< password.length; ++i) {
       if (password[i]== )
     }
-  */
+  
     return true;
   }
+
+ */
 
 }

@@ -3,10 +3,7 @@ import { NavController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { PaymentHistoryPage} from '../payment-history/payment-history';
 import { User } from '../../models/user';
-<<<<<<< HEAD
-=======
 import { Http } from '@angular/http';
->>>>>>> 3325259ac7096e917398e6c9323253a2d4630bcb
 
 @Component({
   selector: 'page-profile',
@@ -14,12 +11,6 @@ import { Http } from '@angular/http';
 })
 export class ProfilePage {
 
-<<<<<<< HEAD
- // public user: User;
-
-  constructor(public navCtrl: NavController) {
-   
-=======
   public first_name: string;
   public last_name: string;
   public email: string;
@@ -43,7 +34,6 @@ export class ProfilePage {
 
         }
       )
->>>>>>> 3325259ac7096e917398e6c9323253a2d4630bcb
   }
 
   logout() {

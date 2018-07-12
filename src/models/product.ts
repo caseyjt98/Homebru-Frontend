@@ -18,7 +18,9 @@ export class Product {
     public image: string;
 
   
+constructor() {  }
 
+/** 
   constructor(address_number: number, street_name: string, city: string, zip_code: number, apt_number: number, description: string, id: number, image: string) {
     this.address_number = address_number;
     this.street_name = street_name;
@@ -31,6 +33,8 @@ export class Product {
      
   }
 
+
+*/
 
 
 
