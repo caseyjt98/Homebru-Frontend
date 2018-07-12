@@ -4,6 +4,8 @@ import { AlertController } from 'ionic-angular';
 import { HttpModule } from"@angular/http";
 import { Http } from '@angular/http';
 import { User } from '../../models/user';
+import { LoginPage } from '../login/login';
+import { AddProductPage } from '../add-product/add-product';
 
 
 /**
@@ -87,22 +89,46 @@ export class Registration3Page {
           handler: () => {
             console.log('Agree clicked');
             this.register();
+
+            if (this.isSubleaser == false) {
+              this.navigateToLogin();
+            }
+
+            else {
+              this.navigateToAddProduct(); 
+            }
+          
           }
         },
         {
           text: 'Disagree',
           handler: () => {
             console.log('Disagree clicked');
+            this.register();
+            if (this.isSubleaser == false) {
+              this.navigateToLogin();
+            }
+            else {
+              this.navigateToAddProduct(); 
+            }
           }
         }
       ]
     });
     confirm.present()
 
+
     // once confirmed, registraton process is done -- make post call to backend
     
   }
 
+  navigateToLogin() {
+    this.navCtrl.push(LoginPage);
+  }
+
+  navigateToAddProduct() {
+    this.navCtrl.push(AddProductPage);
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Registration3Page');

@@ -5,37 +5,34 @@ import { NavController, NavParams } from 'ionic-angular';
   selector: 'page-models',
   templateUrl: 'models.html',
 })
-export class ModelsPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ModelsPage');
-  }
-
-}
 
 export class Property {
+    public address_number: number;
+    public street_name: string;
+    public city: string;
+    public zip_code: number;
+    public apartment_number: number;    // NULL by default bc optional
+    public description: string;
+    public id: number;
 
-  public address: string;
-  public description: string;
   public details: string;
   public image: string;
-  public price: number;
-  public subleaser: string;
-  public contactNum: number;
+  //public price: number;
+  //public subleaser: string;
+  //public contactNum: number;
+  
 
-  constructor(address: string, description: string, details: string, image: string, price: number, subleaser: string, contactNum: number) {
-      this.description= description;
-      this.address= address;
-      this.image= image;
-      this.price= price;
-      this.details= details;
-      this.contactNum= contactNum;
-      this.subleaser= subleaser;
-      
-
+  constructor(address_number: number, street_name: string, city: string, zip_code: number, apartment_number: number, decription: string, id: number, details: string, image: string) {
+    this.address_number = address_number;
+    this.street_name = street_name;
+    this.city = city;
+    this.zip_code = zip_code;
+    this.apartment_number = apartment_number; 
+    this.description = this.description;
+    this.id = id;
+    this.details = details;
+    this.image = image;
+     
   }
 
 

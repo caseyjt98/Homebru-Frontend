@@ -14,6 +14,7 @@ import { DetailsPage } from '../pages/details/details';
 import { PaymentHistoryPage } from '../pages/payment-history/payment-history';
 import { Registration2Page } from '../pages/registration2/registration2';
 import { Registration3Page } from '../pages/registration3/registration3';
+import { AddProductPage } from '../pages/add-product/add-product';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { Registration3Page } from '../pages/registration3/registration3';
     DetailsPage,
     PaymentHistoryPage,
     Registration2Page,
-    Registration3Page
+    Registration3Page,
+    AddProductPage
+    
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,9 @@ import { Registration3Page } from '../pages/registration3/registration3';
     DetailsPage,
     PaymentHistoryPage,
     Registration2Page,
-    Registration3Page
+    Registration3Page,
+    AddProductPage
+  
   ],
   providers: [
     StatusBar,

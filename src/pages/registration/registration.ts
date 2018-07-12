@@ -3,9 +3,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Registration2Page } from '../registration2/registration2';
-import { User } from '../../models/user';
-import { AlertController } from 'ionic-angular';
-import { Http } from '@angular/http';
 
 
 @Component({

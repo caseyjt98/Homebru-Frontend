@@ -2,16 +2,16 @@
 
 page-registration {
 
-    $button-color: rgb(145, 68, 53);
+    $button-color: rgb(161, 192, 219);
     .button { 
 
     padding-bottom: 100%;
     border-radius: 50%;
-    border:10px solid rgb(223, 193, 193);
+    border:10px solid rgb(143, 166, 187);
     overflow:hidden;
         
-    background: rgb(133, 57, 57); 
-    box-shadow: 0 0 3px rgb(187, 139, 139);
+    background: rgba(175, 205, 231, 0.87); 
+    box-shadow: 0 0 3px rgb(193, 209, 223);
     display:block;
     float:left;
     width:100%;
@@ -21,9 +21,9 @@ page-registration {
     margin-top:-0.5em;
         
     text-align:center;
-    color:#e2eaf3;
+    color:#eff3f8;
     font-family: Verdana; 
-    font-size:1.2em;
+    font-size:1.4em;
     font-weight:bold;
     text-decoration:none;
     }

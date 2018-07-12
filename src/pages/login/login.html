@@ -51,11 +51,14 @@
             <ion-card>
                     <img src = {{property.image}}
                     style = "width:450px;height:300px;"/>
+
                     <ion-card-title>
-                        {{property.address}}
+                        {{property.address_number}} {{property.street_name}}
                     </ion-card-title>
+                        {{property.city}} {{property.zip_code}}
+
                     <p>
-                        {{property.description}}
+                        {{property.description}}            <!-- why isn't this showing up -->
                     </p>
         
                     <ion-row no-padding>
