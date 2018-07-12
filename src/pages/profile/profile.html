@@ -7,12 +7,24 @@
       </ion-header>
       
       <ion-content padding center>
-          
+          <!--
         <div class="round-button"><div class="round-button-circle"> 
           <ion-icon center name="ios-contact-outline" default id= "profileImg"> </ion-icon>
           </div>
         </div>
+      -->
       
+      <!--
+      <div class="profilepic-border" align="center">
+          <button class="profilebutton" ng-click="upload()">
+            <ion-icon name="ios-camera" ></ion-icon>
+          </button>
+          <img class="profilepic" padding-bottom ng-src="ios-contact-outline" ng-click="upload()">
+        </div>
+
+      -->
+
+
             <ion-icon center name="ios-contact-outline" default id= "profileImg"> </ion-icon>
          
 
@@ -38,24 +50,21 @@
             <div [ngSwitch]="profile">
               <ion-list *ngSwitchCase="'editprofile'">
                 <ion-item>
-                    {{ email }}
-                    
+                  <p> First Name </p>
+                  <h2> {{ first_name }}  </h2>  
                 </ion-item>
                 <ion-item>
-                    <ion-label> Last Name </ion-label>
-                    <ion-input type="text"></ion-input>
+                    <p> Last Name </p>
+                    <h2> {{ last_name }}  </h2> 
                 </ion-item>
                 <ion-item>
-                    <ion-label> Email </ion-label>
-                    <ion-input type="text"></ion-input>
-                </ion-item>
-                <ion-item>
-                    <ion-label> Password </ion-label>
-                    <ion-input type="text"></ion-input>
+                    <p> Email </p>
+                  <h2> {{ email }}  </h2>
                 </ion-item>
 
 
              <div padding>
+                <button ion-button (click)= "editProfile()"> Edit </button>
                <button ion-button  (click)= "logout()"> Log Out </button>
                </div>
               </ion-list>
