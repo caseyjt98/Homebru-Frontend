@@ -30,20 +30,22 @@ export class Registration2Page {
 
     //Compare passwords
     let match: boolean= this.comparePasswords(password, password2);
+    let strong: boolean= this.checkPasswordStrength(password);
     if (match) {
+      
+      if (strong) {
     
-      this.navCtrl.push(Registration3Page, {
-         first_name: first_name,
+        this.navCtrl.push(Registration3Page, {
+          first_name: first_name,
           last_name: last_name,
           email: email,
-         password: password,
-          is_subleaser: this.is_subleaser
+           password: password,
+           is_subleaser: this.is_subleaser
 
-      });
+        });
+      }
     }
-    else {
-      alert ("Passwords do not match");
-    }
+  
   }
 
   ionViewDidLoad() {
@@ -52,7 +54,25 @@ export class Registration2Page {
 
   comparePasswords(password1:string, password2: string): boolean {
     if (password1 == password2) return true;
-    else return false;
+    else {
+      alert ("Passwords do not match");
+      return false;
+    }
+  }
+
+  checkPasswordStrength(password: string): boolean {
+    if (password.length < 8) {
+      alert("Password must be at least 8 characters");
+      return false;
+    }
+
+    //Check if at least one uppercase
+    /** 
+    for (var i=0; i< password.length; ++i) {
+      if (password[i]== )
+    }
+  */
+    return true;
   }
 
 }
