@@ -3,6 +3,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Registration2Page } from '../registration2/registration2';
+import { User } from '../../models/user';
+import { AlertController } from 'ionic-angular';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'page-registration',
@@ -27,6 +30,7 @@ export class RegistrationPage {
     console.log('Users new state:' + this.isSubleaser);
     this.navigateToRegistration2Page(this.isSubleaser);
   }
+
 
   navigateToRegistration2Page(isSubleaser: boolean) {
     console.log("navigating...");

@@ -11,7 +11,6 @@ import { LoginPage } from '../pages/login/login';
 import { RegistrationPage } from '../pages/registration/registration';
 import { ProfilePage } from '../pages/profile/profile';
 import { DetailsPage } from '../pages/details/details';
-import { PaymentPage } from '../pages/payment/payment';
 import { PaymentHistoryPage } from '../pages/payment-history/payment-history';
 import { Registration2Page } from '../pages/registration2/registration2';
 import { Registration3Page } from '../pages/registration3/registration3';
@@ -24,7 +23,6 @@ import { Registration3Page } from '../pages/registration3/registration3';
     RegistrationPage,
     ProfilePage,
     DetailsPage,
-    PaymentPage,
     PaymentHistoryPage,
     Registration2Page,
     Registration3Page
@@ -42,7 +40,6 @@ import { Registration3Page } from '../pages/registration3/registration3';
     RegistrationPage,
     ProfilePage,
     DetailsPage,
-    PaymentPage,
     PaymentHistoryPage,
     Registration2Page,
     Registration3Page

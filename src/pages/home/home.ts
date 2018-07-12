@@ -18,11 +18,10 @@ export class HomePage {
 
   posts: any;
 
-  public email: string;
-  public password: string;
- 
+  email: string;
+  password: string;
 
-  constructor(public navCtrl: NavController, private http: Http) {
+  constructor(public navCtrl: NavController, public http: Http) {
  
    // this.email = "caseyjt98@gmail.com";
 
@@ -92,7 +91,7 @@ export class HomePage {
     this.navCtrl.push(RegistrationPage);
   }
 
-  //make a function to create instance of user
+  //make a function to create instance of user?
   
   
 }
