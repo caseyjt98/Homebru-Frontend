@@ -21,9 +21,8 @@ export class HomePage {
   email: string;
   password: string;
 
-  constructor(public navCtrl: NavController, public http: Http) {
- 
-   // this.email = "caseyjt98@gmail.com";
+  constructor(public navCtrl: NavController, private http: Http) {
+
 
     if (localStorage.getItem("TOKEN")) {
       alert("Already logged in");
@@ -44,7 +43,10 @@ export class HomePage {
     this.http.get('https://www.reddit.com/r/gifs/new/.json?limit=10').map(res => res.json()).subscribe(data => {
         //this.posts = data.data.children;
     });
-    */
+*/
+
+
+    
  
   }
 
@@ -84,6 +86,8 @@ export class HomePage {
   this.navigateToLogin();
   }
 
+
+  
   navigateToRegistration() {
 
     console.log("Navigating...")

@@ -7,6 +7,7 @@ import { User } from '../../models/user';
 import { AlertController } from 'ionic-angular';
 import { Http } from '@angular/http';
 
+
 @Component({
   selector: 'page-registration',
   templateUrl: 'registration.html'
@@ -31,7 +32,6 @@ export class RegistrationPage {
     this.navigateToRegistration2Page(this.isSubleaser);
   }
 
-
   comparePasswords(password1:string, password2: string): boolean {
     if (password1 == password2) return true;
     else return false;
@@ -43,5 +43,6 @@ export class RegistrationPage {
         isSubleaser: isSubleaser
     });
   }
+
 }
 

@@ -67,7 +67,7 @@
                             </ion-col>
                              
                             <ion-col text-center>
-                                <button ion-button clear small color="danger" icon-start >
+                                <button ion-button clear small color="danger" icon-start (click)= "changeSaveButtonColor();" [ngStyle]= "{'background-color': buttonColor}">
                                     <ion-icon name='star'></ion-icon>
                                         Save 
                                 </button>

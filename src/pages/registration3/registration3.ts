@@ -42,8 +42,8 @@ export class Registration3Page {
   register () {
 
     var user = new User();
-    user.firstname= this.firstname,
-    user.lastname = this.lastname,
+    user.first_name= this.firstname,
+    user.last_name = this.lastname,
     user.email = this.email,
     user.password = this.password,
     user.isSubleaser = this.isSubleaser
