@@ -67,6 +67,9 @@ export class Registration2Page {
       return false;
     }
 
+   
+
+ 
     //Check if at least one uppercase
     
     for (var i=0; i< password.length; ++i) {
@@ -76,5 +79,7 @@ export class Registration2Page {
     return true;
   }
   */
+
+
 
 }

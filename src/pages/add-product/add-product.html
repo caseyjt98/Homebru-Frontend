@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Find Subletters For Your Apartment</ion-title>
+    
   </ion-navbar>
 
 </ion-header>
@@ -56,19 +56,19 @@
 
               <ion-row row-auto>
                   <ion-col col-auto padding>
-                      <ion-input id = "input" type = "number" placeholder = "# residents"></ion-input>
+                      <ion-input id = "input" [(ngModel)]= "num_residents" type = "number" placeholder = "# residents"></ion-input>
                   </ion-col>
               </ion-row>
 
               <ion-row row-auto>
                   <ion-col col-auto padding>
-                      <ion-input id = "input" type = "number" placeholder = "# bathrooms"></ion-input>
+                      <ion-input id = "input" [(ngModel)]= "num_bathrooms" type = "number" placeholder = "# bathrooms"></ion-input>
                     </ion-col>
                   </ion-row>
 
                 <ion-row row-auto>
                   <ion-col col-auto padding>
-                      <ion-input id = "input" type = "number" placeholder = "# bedrooms"></ion-input>
+                      <ion-input id = "input" [(ngModel)]= "num_bedrooms" type = "number" placeholder = "# bedrooms"></ion-input>
                   </ion-col>
                 </ion-row>
 
