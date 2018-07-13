@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Product } from '../../models/product';
+import { ProfilePage } from '../profile/profile';
 
 /**
  * Generated class for the AddProductPage page.
@@ -62,6 +63,11 @@ export class AddProductPage {
   }
 
   */
+
+  navigateToProfile() {
+    console.log("navigating");
+    this.navCtrl.push(ProfilePage);
+  }
 
 
   ionViewDidLoad() {
