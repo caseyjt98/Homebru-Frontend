@@ -4,6 +4,7 @@ import { HomePage } from '../home/home';
 import { PaymentHistoryPage} from '../payment-history/payment-history';
 import { User } from '../../models/user';
 import { Http } from '@angular/http';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-profile',
@@ -30,6 +31,8 @@ export class ProfilePage {
           this.email= result.user.email;
           this.first_name= result.user.first_name;
           this.last_name= result.user.last_name;
+          console.log("first name "+ this.first_name);
+          console.log("email: "+ this.email);
          
         },
 
@@ -54,6 +57,10 @@ export class ProfilePage {
   editProfile() {
     //edit profile??
     console.log("editing profile...");
+  }
+
+  navigateToLogin() {
+    this.navCtrl.push(LoginPage);
   }
   
 }

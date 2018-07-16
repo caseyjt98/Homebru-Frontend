@@ -41,6 +41,7 @@ export class AddProductPage {
 
 // FINISH THIS LATER, make post request for newly created product
   // register new user by calling post to our backend
+  
   postProduct () {
 
     

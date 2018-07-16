@@ -32,7 +32,6 @@ export class Registration2Page {
     let match: boolean= this.comparePasswords(password, password2);
     //let strong: boolean= this.checkPasswordStrength(password);
     if (match) {
-      
   
     
         this.navCtrl.push(Registration3Page, {
@@ -66,9 +65,6 @@ export class Registration2Page {
       alert("Password must be at least 8 characters");
       return false;
     }
-
-   
-
  
     //Check if at least one uppercase
     

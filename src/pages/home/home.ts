@@ -25,7 +25,7 @@ export class HomePage {
 
 
     if (localStorage.getItem("TOKEN")) {
-      alert("Already logged in");
+     // alert("Already logged in");
     
       this.http.get("http://localhost:3000/verify?jwt=" + localStorage.getItem("TOKEN")).subscribe(
         result => {
@@ -47,7 +47,6 @@ export class HomePage {
   }
 
   //link this function to our Log In button to make it do something 
-  
   navigateToLogin() {
  
     console.log("Navigating...") 
@@ -70,7 +69,7 @@ export class HomePage {
 
       localStorage.setItem("TOKEN",token);
 
-      //let t = localStorage.getItem("TOKEN");
+      
 
       this.navigateToLogin();
     },
