@@ -28,11 +28,11 @@ export class Registration3Page {
   is_subleaser: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public alerCtrl: AlertController, public http: Http) {
-    this.first_name= navParams.get('firstname');
-    this.last_name = navParams.get('lastname');
+    this.first_name= navParams.get('first_name');
+    this.last_name = navParams.get('last_name');
     this.email = navParams.get('email');
     this.password = navParams.get('password');
-    this.is_subleaser = navParams.get('isSubleaser');
+    this.is_subleaser = navParams.get('is_subleaser');
     console.log("user status on reg3 is: " + this.is_subleaser);
     console.log("user first name on reg3 is :" + this.first_name);
     console.log("user last name on reg3 is :" + this.last_name);
@@ -65,7 +65,7 @@ export class Registration3Page {
   
         localStorage.setItem("TOKEN",token);
   
-        let t = localStorage.getItem("TOKEN");
+        //let t = localStorage.getItem("TOKEN");
       },
 
       err => {

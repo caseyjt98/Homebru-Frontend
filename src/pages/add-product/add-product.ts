@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Product } from '../../models/product';
 import { Http } from '@angular/http';
-import { HttpModule } from"@angular/http";
+import { HttpModule } from '@angular/http';
+import { ProfilePage } from '../profile/profile';
 
 /**
  * Generated class for the AddProductPage page.
@@ -40,6 +41,7 @@ export class AddProductPage {
 
 // FINISH THIS LATER, make post request for newly created product
   // register new user by calling post to our backend
+  
   postProduct () {
 
     
@@ -78,6 +80,11 @@ export class AddProductPage {
   }
 
   
+
+  navigateToProfile() {
+    console.log("navigating");
+    this.navCtrl.push(ProfilePage);
+  }
 
 
   ionViewDidLoad() {
