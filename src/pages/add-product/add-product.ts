@@ -58,7 +58,7 @@ export class AddProductPage {
 
     console.log("product created");
 
-    this.http.post("http://localhost:3000/product", product)
+    this.http.post("https://homebru-subletting.herokuapp.com/product", product)
     .subscribe(
       result => {
         // This will run when post method succeeded
