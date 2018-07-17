@@ -52,7 +52,7 @@ export class Registration3Page {
 
     console.log("user created for registration");
 
-    this.http.post("http://localhost:3000/registration", user)
+    this.http.post("https://homebru-subletting.herokuapp.com/registration", user)
     .subscribe(
       result => {
         // This will run when registration succeeded
