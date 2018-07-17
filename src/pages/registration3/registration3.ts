@@ -57,15 +57,13 @@ export class Registration3Page {
       result => {
         // This will run when registration succeeded
         // navigate to home, pass in jwt 
-        // this.navCtrl.push()
         console.log(result);
 
         var jwtResponse = result.json();
         var token = jwtResponse.token;
   
         localStorage.setItem("TOKEN",token);
-  
-        //let t = localStorage.getItem("TOKEN");
+
       },
 
       err => {

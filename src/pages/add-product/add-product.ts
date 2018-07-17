@@ -25,8 +25,7 @@ export class AddProductPage {
   public city: string;
   public zip_code: number;
   public apt_number: number;   
-  public description: string;
-  public id: number;
+  public details: string;
   public image: string;
 
   public num_residents: number;
@@ -34,16 +33,24 @@ export class AddProductPage {
   public num_bedrooms: number;
   
 
-
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
+
+    this.address_number= navParams.get('address_number');
+    this.street_name= navParams.get('street_name');
+    this.city= navParams.get('city');
+    this.zip_code= navParams.get('zip_code');
+    this.apt_number= navParams.get('apt_number');
+    this.num_residents= navParams.get('num_residents');
+    this.num_bathrooms= navParams.get('num_bathrooms');
+    this.num_bedrooms= navParams.get('num_bedrooms');
+    this.details= "...details...";
+
   }
 
-
-// FINISH THIS LATER, make post request for newly created product
+  // FINISH THIS LATER, make post request for newly created product
   // register new user by calling post to our backend
   
   postProduct () {
-
     
     var product = new Product();
     product.address_number= this.address_number,
@@ -51,23 +58,17 @@ export class AddProductPage {
     product.city = this.city;
     product.zip_code = this.zip_code;
     product.apt_number = this.apt_number;
-    product.description = this.description;
-    product.id = this.id;
-    product.image = this.image;
+    product.details = this.details;
     
-
-    console.log("product created");
+    
 
     this.http.post("https://homebru-subletting.herokuapp.com/product", product)
     .subscribe(
       result => {
         // This will run when post method succeeded
         console.log(result);
+        console.log("post request sent");
 
-        var jwtResponse = result.json();
-        var token = jwtResponse.token;
-  
-        localStorage.setItem("TOKEN",token);
       },
 
       err => {
@@ -75,14 +76,15 @@ export class AddProductPage {
       }
     )
 
-    console.log("post request sent");
-
   }
 
   
 
   navigateToProfile() {
     console.log("navigating");
+
+    this.postProduct();
+
     this.navCtrl.push(ProfilePage);
   }
 
