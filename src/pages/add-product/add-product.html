@@ -31,6 +31,12 @@
                               </ion-col>
                             </ion-row>
 
+                            <ion-row row-auto>
+                                    <ion-col col-auto padding>
+                                        <ion-input id = "input" [(ngModel)]="apt_number" type = "string" placeholder = "Apt. Number (optional)"></ion-input>
+                                    </ion-col>
+                                  </ion-row>
+
                           <ion-row row-auto>
                               <ion-col col-auto padding>
                                   <ion-input id = "input" [(ngModel)]="city" type = "string" placeholder = "City"></ion-input>
@@ -84,5 +90,5 @@
   </ion-card>
 
 
-  <button ion-button (click)= "navigateToProfile()" > Next </button>
+  <button ion-button (click)= "navigateToProfile()" > Finish </button>
     </ion-content>

@@ -24,7 +24,7 @@ export class ProfilePage {
       console.log("invalid token");
     }
 
-    this.http.get("http://localhost:3000/verify?jwt=" + t)
+    this.http.get("https://homebru-subletting.herokuapp.com/verify?jwt=" + t)
       .subscribe(
         response => {
           let result = response.json();
