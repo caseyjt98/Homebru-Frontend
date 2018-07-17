@@ -5,7 +5,6 @@ import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login'; 
 import { RegistrationPage } from '../registration/registration';
 import { Http } from '@angular/http';
-import { MapPage } from '../map/map';
 import 'rxjs/add/operator/map';
 
 
@@ -82,8 +81,6 @@ export class HomePage {
   );
 
   }
-
-
 
   navigateToRegistration() {
 
