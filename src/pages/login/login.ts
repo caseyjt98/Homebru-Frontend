@@ -21,7 +21,6 @@ export class LoginPage {
     var property1 = new Product();
     var property2 = new Product();
     var property3 = new Product();
-    var property4 = new Product();
     
 
     
@@ -32,7 +31,7 @@ export class LoginPage {
     property1.apt_number = 5;
     property1.details = "10 person apartment, 5 bedrooms, 4 bathrooms";
     property1.id = 1;
-    property1.image = "https://scontent-jnb1-1.xx.fbcdn.net/v/t1.0-9/s720x720/35884124_1801083623268238_2366583428851171328_o.jpg?_nc_cat=0&oh=85f1c805638b6c54f26528e06194d463&oe=5B9F49CF";
+    //property1.image = "https://scontent-jnb1-1.xx.fbcdn.net/v/t1.0-9/s720x720/35884124_1801083623268238_2366583428851171328_o.jpg?_nc_cat=0&oh=85f1c805638b6c54f26528e06194d463&oe=5B9F49CF";
 
 
     property2.address_number = 65;
@@ -42,7 +41,7 @@ export class LoginPage {
     property2.apt_number = 4;
     property2.details = "5 person apartment, 2 bedrooms, 2 bathrooms";
     property2.id = 2;
-    property2.image = "https://scontent-jnb1-1.xx.fbcdn.net/v/t1.0-9/s720x720/35884124_1801083623268238_2366583428851171328_o.jpg?_nc_cat=0&oh=85f1c805638b6c54f26528e06194d463&oe=5B9F49CF";
+    //property2.image = "https://scontent-jnb1-1.xx.fbcdn.net/v/t1.0-9/s720x720/35884124_1801083623268238_2366583428851171328_o.jpg?_nc_cat=0&oh=85f1c805638b6c54f26528e06194d463&oe=5B9F49CF";
 
 
     property3.address_number = 100;
@@ -52,7 +51,7 @@ export class LoginPage {
     property3.apt_number = 2;
     property3.details = "5 person apartment, 2 bedrooms, 2 bathrooms";
     property3.id = 3;
-    property3.image = "https://scontent-jnb1-1.xx.fbcdn.net/v/t1.0-9/s720x720/35884124_1801083623268238_2366583428851171328_o.jpg?_nc_cat=0&oh=85f1c805638b6c54f26528e06194d463&oe=5B9F49CF";
+    //property3.image = "https://scontent-jnb1-1.xx.fbcdn.net/v/t1.0-9/s720x720/35884124_1801083623268238_2366583428851171328_o.jpg?_nc_cat=0&oh=85f1c805638b6c54f26528e06194d463&oe=5B9F49CF";
 
 
 
@@ -60,8 +59,7 @@ export class LoginPage {
 
     this.listings.push(property1);   
     this.listings.push(property2);   
-    this.listings.push(property3); 
-    this.listings.push(property4);    
+    this.listings.push(property3);     
 }
 
 navigateToMap() {

@@ -31,8 +31,6 @@ export class ProfilePage {
           this.email= result.user.email;
           this.first_name= result.user.first_name;
           this.last_name= result.user.last_name;
-          console.log("first name "+ this.first_name);
-          console.log("email: "+ this.email);
          
         },
 

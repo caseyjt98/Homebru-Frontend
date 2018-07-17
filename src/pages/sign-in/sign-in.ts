@@ -28,7 +28,7 @@ export class SignInPage {
     if (localStorage.getItem("TOKEN")) {
      // alert("Already logged in");
     
-      this.http.get("http:localhost:3000/verify?jwt=" + localStorage.getItem("TOKEN")).subscribe(
+      this.http.get("https://homebru-subletting.herokuapp.com/verify?jwt=" + localStorage.getItem("TOKEN")).subscribe(
         result => {
           console.log(result.json());
         },
@@ -43,7 +43,7 @@ export class SignInPage {
 
   login() {
     this.http
-      .post("http:localhost:3000/login", {
+      .post("https://homebru-subletting.herokuapp.com/login", {
         email: this.email,
         password: this.password
   })

@@ -43,7 +43,7 @@ export class AddProductPage {
     this.num_residents= navParams.get('num_residents');
     this.num_bathrooms= navParams.get('num_bathrooms');
     this.num_bedrooms= navParams.get('num_bedrooms');
-    this.details= "...details...";
+    this.details= navParams.get('details');
 
   }
 
@@ -60,6 +60,9 @@ export class AddProductPage {
     product.apt_number = this.apt_number;
     product.details = this.details;
     
+    console.log("addres num: "+ product.address_number);
+    console.log("street name: "+ product.street_name);
+    console.log("city: "+ product.city);
     
 
     this.http.post("https://homebru-subletting.herokuapp.com/product", product)
@@ -82,9 +85,11 @@ export class AddProductPage {
 
   navigateToProfile() {
     console.log("navigating");
+    this.navCtrl.push(ProfilePage);
+  }
 
+  doConfirm() {
     this.postProduct();
-
     this.navCtrl.push(ProfilePage);
   }
 

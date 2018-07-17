@@ -7,7 +7,11 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Describe Your Listing Below </ion-title>
+      <ion-title>Describe Your Listing Below </ion-title>
+      <ion-buttons end>
+            <button ion-button end clear id ="next-button" small icon-end (click)= "navigateToProfile()">
+                    <ion-icon name='share-alt'></ion-icon>  Skip   </button>  
+      </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -15,8 +19,10 @@
 <ion-content padding> 
                      
     <ion-card>
-                        <ion-title padding> Address </ion-title>
-
+      
+                
+            <ion-title padding> Address </ion-title>
+                      
                         <ion-grid fixed>
 
                           <ion-row row-auto>
@@ -90,5 +96,5 @@
   </ion-card>
 
 
-  <button ion-button (click)= "navigateToProfile()" > Finish </button>
+  <button ion-button (click)= "doConfirm()" > Finish </button>
     </ion-content>
