@@ -3,7 +3,7 @@
 
 <ion-header>
     <ion-navbar>
-      <ion-title>
+      <ion-title color = "primary">
         Welcome! Login or Register Below.
       </ion-title>
     </ion-navbar>
@@ -12,10 +12,10 @@
  
 
     
-    <ion-content>  
-  
-        <ion-list>
-      
+    <ion-content class = "background">  
+
+      <!-- <img src = "logo.png">  -->
+        <ion-list class = "list">
           <ion-item>
             <ion-input type="text" placeholder= "Email" [(ngModel)] = "email" ></ion-input>
           </ion-item>
@@ -37,6 +37,7 @@
         <!-- <button ion-button color="primary" block (click) = "navigateToLogin()">Log In</button> -->
         <button ion-button color="primary" block (click) = "login()">Log In</button>
         <button ion-button color="primary" block (click) = "navigateToRegistration()">Register</button>
+        <button ion-button color="primary" block (click) = "navigateToMap()">See Map</button>
       </div>
 
 

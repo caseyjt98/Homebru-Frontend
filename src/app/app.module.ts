@@ -15,6 +15,7 @@ import { PaymentHistoryPage } from '../pages/payment-history/payment-history';
 import { Registration2Page } from '../pages/registration2/registration2';
 import { Registration3Page } from '../pages/registration3/registration3';
 import { AddProductPage } from '../pages/add-product/add-product';
+import { MapPage } from '../pages/map/map';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AddProductPage } from '../pages/add-product/add-product';
     PaymentHistoryPage,
     Registration2Page,
     Registration3Page,
-    AddProductPage
+    AddProductPage,
+    MapPage
     
   ],
   imports: [
@@ -46,7 +48,8 @@ import { AddProductPage } from '../pages/add-product/add-product';
     PaymentHistoryPage,
     Registration2Page,
     Registration3Page,
-    AddProductPage
+    AddProductPage,
+    MapPage
   
   ],
   providers: [
