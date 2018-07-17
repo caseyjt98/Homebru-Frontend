@@ -8,9 +8,6 @@
                         Browse Available Properties     
                      </ion-title>
                      <ion-buttons end>
-                         <button ion-button icon-only (click)= "navigateToMaps()">
-                             <ion-icon name= "map"></ion-icon>
-                         </button>
                          <button ion-button icon-only (click)="navigateToProfilePage()">
                              <ion-icon name="md-person"></ion-icon>
                          </button>
@@ -36,8 +33,10 @@
                 
                                 </ion-select>
                         </ion-item>
-                          
-                  
+                    </ion-col>
+
+                    <ion-col text-center>
+                        <button ion-button (click) = "navigateToMap()"> View Map </button>
                     </ion-col>
             </ion-row>
                                               

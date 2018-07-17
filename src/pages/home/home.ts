@@ -47,12 +47,6 @@ export class HomePage {
  
   }
 
-  navigateToMap() {
-    console.log("Navigating...") 
-
-    this.navCtrl.push(MapPage); 
-  }
-
   //link this function to our Log In button to make it do something 
   navigateToLogin() {
  
