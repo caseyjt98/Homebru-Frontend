@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { Geolocation } from '@ionic-native/geolocation';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
@@ -16,7 +15,6 @@ import { PaymentHistoryPage } from '../pages/payment-history/payment-history';
 import { Registration2Page } from '../pages/registration2/registration2';
 import { Registration3Page } from '../pages/registration3/registration3';
 import { AddProductPage } from '../pages/add-product/add-product';
-import { MapsPage } from '../pages/maps/maps';
   
 @NgModule({
   declarations: [
@@ -30,7 +28,6 @@ import { MapsPage } from '../pages/maps/maps';
     Registration2Page,
     Registration3Page,
     AddProductPage,
-    MapsPage
     
   ],
   imports: [
@@ -49,14 +46,11 @@ import { MapsPage } from '../pages/maps/maps';
     PaymentHistoryPage,
     Registration2Page,
     Registration3Page,
-    AddProductPage,
-    MapsPage
+    AddProductPage
   
   ],
   providers: [
     StatusBar,
-    Geolocation,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
