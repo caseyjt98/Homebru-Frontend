@@ -27,7 +27,7 @@ export class HomePage {
     if (localStorage.getItem("TOKEN")) {
      // alert("Already logged in");
     
-      this.http.get("https://homebru-subletting.herokuapp.com/verify?jwt=" + localStorage.getItem("TOKEN")).subscribe(
+      this.http.get("http:localhost:3000/verify?jwt=" + localStorage.getItem("TOKEN")).subscribe(
         result => {
           console.log(result.json());
         },
@@ -56,7 +56,7 @@ export class HomePage {
 
   login() {
     this.http
-      .post("https://homebru-subletting.herokuapp.com/login", {
+      .post("http:localhost:3000/login", {
         email: this.email,
         password: this.password
   })
@@ -76,6 +76,7 @@ export class HomePage {
     err => {
       console.log(err);
       alert("Failed to login");
+      this.navigateToLogin();
     }
   );
 

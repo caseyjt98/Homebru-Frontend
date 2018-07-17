@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 import { DetailsPage } from '../details/details';
 import { Product } from '../../models/product';
+import { MapsPage } from '../maps/maps';
 
 @Component({
   selector: 'page-login',
@@ -67,6 +68,10 @@ export class LoginPage {
 
   addToSavedProperties() {
     
+  }
+
+  navigateToMaps() {
+    this.navCtrl.push(MapsPage);
   }
 
   
