@@ -38,8 +38,8 @@ export class Registration2Page {
           first_name: first_name,
           last_name: last_name,
           email: email,
-           password: password,
-           is_subleaser: this.is_subleaser
+          password: password,
+          is_subleaser: this.is_subleaser
 
         });
       
