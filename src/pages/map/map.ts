@@ -20,13 +20,20 @@ export class MapPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad MapPage');
 
-    // The location of Uluru
-    var uluru = {lat: -25.344, lng: 131.036};
-    // The map, centered at Uluru
+
+    // var centerLA = new google.maps.LatLng({lat: 34.063502, lng: -118.445516}); 
+
+    // The location of Westwood, LA
+    var westwood = {lat: 34.063502, lng: -118.445516};
+
+     // The map, centered at Westwood
     var map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 4, center: uluru});
-    // The marker, positioned at Uluru
-    var marker = new google.maps.Marker({position: uluru, map: map});
+      document.getElementById('map'), {zoom: 15, center: westwood});
+
+
+    // The marker, positioned at Westwood
+    var marker = new google.maps.Marker({position: westwood, map: map});
+
   }
 
 }

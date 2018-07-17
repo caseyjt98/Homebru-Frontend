@@ -1,6 +1,18 @@
 page-home {
+
+    /*
     .background,.background .pane , .background .item , .background .item-complex .item-content{
-        background-color:rgba(164, 217, 221, 0.199);
+        background-color:rgba(186, 217, 219, 0.486);
     }
+    */
+
     
+    .toolbar-background {
+        background-color: #5d74a7ad;
+      }
+
+      #logo {
+          display: flex;
+          justify-content: center;
+      }
 }

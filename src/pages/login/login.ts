@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 import { DetailsPage } from '../details/details';
 import { Product } from '../../models/product';
+import { MapPage } from '../map/map';
 
 @Component({
   selector: 'page-login',
@@ -61,6 +62,12 @@ export class LoginPage {
     this.listings.push(property2);   
     this.listings.push(property3); 
     this.listings.push(property4);    
+}
+
+navigateToMap() {
+  console.log("Navigating...") 
+
+  this.navCtrl.push(MapPage); 
 }
 
   navigateToProfilePage() {

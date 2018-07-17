@@ -16,25 +16,44 @@
             </ion-navbar>
 
             <ion-row no-padding>
+                <!--
                     <ion-col>
                         <ion-item>
                             <ion-input type="text" placeholder= "Location" ></ion-input>
                         </ion-item>
                     </ion-col>
+                -->
                 
                     <ion-col text-center>
+                        <h1 id = "price-range" padding-top padding-bottom> Price Range </h1>
+                    </ion-col>
 
-                        <ion-item>
+                    <ion-col>
+                        <ion-range  min="0" max="2000" [(ngModel)]="priceRange" color = "primary" > 
+                            <ion-label range-left id = "range-val"> 0 </ion-label>
+                            <ion-label range-right id = "range-val"> 2000 </ion-label>
+                        </ion-range>
+                    </ion-col>
+
+                
+
+
+
+                            <!-- 
+                             <ion-item>
                                 <ion-label>Price Range</ion-label>
                                 <ion-select [(ngModel)]="priceRange" interface="popover">
                                         <ion-option ion-button value="minPrice">minimum </ion-option>
                                         <ion-option ion-button value="maxPrice">maximum </ion-option>
-
-                
                                 </ion-select>
-                        </ion-item>
-                          
-                  
+                            </ion-item>
+                        </ion-col>
+                            -->
+                 
+                    
+
+                    <ion-col text-center>
+                        <button ion-button (click) = "navigateToMap()"> View Map </button>
                     </ion-col>
             </ion-row>
                                               
@@ -58,7 +77,7 @@
                         {{property.city}} {{property.zip_code}}
 
                     <p>
-                        {{property.description}}            <!-- why isn't this showing up -->
+                        {{property.description}}          
                     </p>
         
                     <ion-row no-padding>

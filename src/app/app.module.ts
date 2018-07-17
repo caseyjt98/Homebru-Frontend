@@ -16,6 +16,7 @@ import { Registration2Page } from '../pages/registration2/registration2';
 import { Registration3Page } from '../pages/registration3/registration3';
 import { AddProductPage } from '../pages/add-product/add-product';
 import { MapPage } from '../pages/map/map';
+import { SignInPage } from '../pages/sign-in/sign-in';
   
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MapPage } from '../pages/map/map';
     Registration2Page,
     Registration3Page,
     AddProductPage,
-    MapPage
+    MapPage,
+    SignInPage
     
   ],
   imports: [
@@ -49,7 +51,8 @@ import { MapPage } from '../pages/map/map';
     Registration2Page,
     Registration3Page,
     AddProductPage,
-    MapPage
+    MapPage,
+    SignInPage
   
   ],
   providers: [
