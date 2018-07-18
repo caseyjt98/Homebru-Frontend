@@ -1,7 +1,6 @@
 <ion-header>
 
     <ion-card> 
-
             <ion-navbar> 
 
                     <ion-title>
@@ -35,23 +34,6 @@
                         </ion-range>
                     </ion-col>
 
-                
-
-
-
-                            <!-- 
-                             <ion-item>
-                                <ion-label>Price Range</ion-label>
-                                <ion-select [(ngModel)]="priceRange" interface="popover">
-                                        <ion-option ion-button value="minPrice">minimum </ion-option>
-                                        <ion-option ion-button value="maxPrice">maximum </ion-option>
-                                </ion-select>
-                            </ion-item>
-                        </ion-col>
-                            -->
-                 
-                    
-
                     <ion-col text-center>
                         <button ion-button (click) = "navigateToMap()"> View Map </button>
                     </ion-col>
@@ -77,7 +59,7 @@
                         {{property.city}} {{property.zip_code}}
 
                     <p>
-                        {{property.description}}          
+                        {{property.details}}          
                     </p>
         
                     <ion-row no-padding>
