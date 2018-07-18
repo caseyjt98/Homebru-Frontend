@@ -3,4 +3,12 @@ page-sign-in {
     .toolbar-background {
         background-color: #5d74a7ad;
       }
+      #forgotpwd {
+          display: flex;
+          align-content: center;
+          color: 'secondary';
+          text-align: center;
+          margin: auto;
+          justify-content: center;
+      }
 }

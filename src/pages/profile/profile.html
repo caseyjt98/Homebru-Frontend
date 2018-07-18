@@ -12,29 +12,10 @@
  </ion-header>
       
       <ion-content padding center>
-          <!--
-        <div class="round-button"><div class="round-button-circle"> 
-          <ion-icon center name="ios-contact-outline" default id= "profileImg"> </ion-icon>
-          </div>
-        </div>
-      -->
       
-      <!--
-      <div class="profilepic-border" align="center">
-          <button class="profilebutton" ng-click="upload()">
-            <ion-icon name="ios-camera" ></ion-icon>
-          </button>
-          <img class="profilepic" padding-bottom ng-src="ios-contact-outline" ng-click="upload()">
-        </div>
-
-      -->
-
-
-            <ion-icon center name="ios-contact-outline" default id= "profileImg"> </ion-icon>
+            <ion-icon center name="ios-contact-outline" default id= "profileImg" (click)= "editProfilePic()"> </ion-icon>
          
 
-           <!-- <button ion-button round color="light" icon-only id= "addProfilePic" ><ion-icon name="add" small  ></ion-icon> </button> -->
-        
           <div padding>
               <ion-segment [(ngModel)]="profile">
                 <ion-segment-button value="editprofile" id= "editprofile">

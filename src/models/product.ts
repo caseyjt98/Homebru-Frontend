@@ -15,7 +15,7 @@ export class Product {
     public zip_code: number;
     public apt_number: number;    // NULL by default bc optional
     public details: string;
-    //public image: string;
+    public image: string;
 
   
 constructor() {}

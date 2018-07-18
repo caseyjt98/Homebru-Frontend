@@ -44,6 +44,7 @@ export class AddProductPage {
     this.num_bathrooms= navParams.get('num_bathrooms');
     this.num_bedrooms= navParams.get('num_bedrooms');
     this.details= navParams.get('details');
+    this.image= navParams.get('image');
 
   }
 
@@ -59,6 +60,7 @@ export class AddProductPage {
     product.zip_code = this.zip_code;
     product.apt_number = this.apt_number;
     product.details = this.details;
+    product.image= this.image;
     
     console.log("addres num: "+ product.address_number);
     console.log("street name: "+ product.street_name);
