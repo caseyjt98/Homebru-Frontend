@@ -20,9 +20,11 @@ export class User {
     public password: string;
     public location: string;
     public is_subleaser: boolean;
+    public image: string;
 
     constructor() {
         this.is_subleaser = false;        // false by default, will change upon registration
+        this.image= "";                  // no image by default
     }
 
 }

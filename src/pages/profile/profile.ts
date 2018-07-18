@@ -16,6 +16,7 @@ export class ProfilePage {
   public first_name: string;
   public last_name: string;
   public email: string;
+  public base64Image: string;
 
   constructor(public navCtrl: NavController, private http: Http, private alertCtrl: AlertController, private camera: Camera) {
     let t = localStorage.getItem("TOKEN");
@@ -32,6 +33,7 @@ export class ProfilePage {
           this.email= result.user.email;
           this.first_name= result.user.first_name;
           this.last_name= result.user.last_name;
+          this.base64Image= result.user.image;
          
         },
 
@@ -98,7 +100,7 @@ export class ProfilePage {
     console.log("editing profile pic...");
     let prompt = this.alertCtrl.create({
       title: 'Edit Profile Picture',
-      message: "Click Save to Confirm Changes",
+      //message: "Click Save to Confirm Changes",
       
       buttons: [
         {
@@ -125,17 +127,38 @@ export class ProfilePage {
       quality: 100,
       destinationType: this.camera.DestinationType.FILE_URI,
       encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE
+      mediaType: this.camera.MediaType.PICTURE,
+      targetWidth: 400,
+      targetHeight: 400
     }
   
     this.camera.getPicture(options).then((imageData) => {
    // imageData is either a base64 encoded string or a file URI
    // If it's base64 (DATA_URL):
-     let base64Image = 'data:image/jpeg;base64,' + imageData;
+     this.base64Image = 'data:image/jpeg;base64,' + imageData;
     }, (err) => {
       // Handle error
       console.log(err);
     });
 
+    let t = localStorage.getItem("TOKEN");
+  
+    this.http.get("https://homebru-subletting.herokuapp.com/verify?jwt=" + t)
+      .subscribe(
+        response => {
+          let result = response.json();
+          result.user.image= this.base64Image;
+        },
+
+        err => {
+          console.log(err);
+
+        }
+      )
+
+
   }
+
+
+
 }
