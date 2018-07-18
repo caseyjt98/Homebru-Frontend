@@ -55,6 +55,7 @@ export class Registration3Page {
     this.http.post("https://homebru-subletting.herokuapp.com/registration", user)
     .subscribe(
       result => {
+    
         // This will run when registration succeeded
         // navigate to home, pass in jwt 
         console.log(result);
