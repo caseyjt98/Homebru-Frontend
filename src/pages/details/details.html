@@ -9,27 +9,39 @@
       <ion-title>Details</ion-title>
     </ion-navbar>
   
-  </ion-header>
+</ion-header>
   
   
   
+public id: number;
+public address_number: number;
+public street_name: string;
+public city: string;
+public zip_code: number;
+public apt_number: number;    // NULL by default bc optional
+public details: string;
+    public image: string;
+
+
   <ion-content padding>
-  
-    <!--
-    <h1>
-      {{ currProperty.address_number }}
-      {{ currProperty.street_name }}
-    </h1>
-  -->
-  
-      <p>
-        {{ currProperty.description }}
-      </p>
-  
-      
-      <img src = {{currProperty.image}}
-      style= "width:750px;height:500px;" />
-      
-  
+    <ion-card>
+      <ion-title id = "address">
+          {{currProperty.address_number}} {{this.currProperty.street_name}} 
+          <br> {{this.currProperty.city}} 
+      </ion-title>
+
+      <body id = "text">
+        This property has 
+      </body>
+
+
+
+      <img ion-img src = {{currProperty.image}}
+      style= "width:250px;height:300px;" />
+    </ion-card>
+
+
+    <img src = {{currProperty.image}}
+      style= "width:250px;height:300px;" />
       
   </ion-content>

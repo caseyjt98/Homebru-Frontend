@@ -13,6 +13,7 @@ export class DetailsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.currProperty= navParams.get('currProperty');
+    console.log(this.currProperty.address_number + " " + this.currProperty.street_name + " " + this.currProperty.city);
   }
 
   ionViewDidLoad() {
