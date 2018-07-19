@@ -2,10 +2,18 @@
 
 <ion-header>
     <ion-navbar>
-      <ion-title>
-        My Map
-      </ion-title>
-      <button ion-button end color="danger" (click)= "geocodeAddresses()"></button>
+      <ion-row>
+        <ion-col>
+            <ion-title padding-top padding-bottom>
+                My Map
+            </ion-title>
+        </ion-col>
+        <ion-col>
+            <button ion-button end color="danger" (click)= "geocodeAddresses()"> View Nearby Properties </button>
+        </ion-col>
+      </ion-row>
+  
+     
     </ion-navbar>
   </ion-header>
 
