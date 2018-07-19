@@ -18,20 +18,22 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController, public http: Http) {
 
-    // Get all products from database
+   
+    //Get all products from database
     this.http.get("https://homebru-subletting.herokuapp.com/products")
     .subscribe(
         response => {
           console.log(response.json());
           this.listings = response.json();  // result holds all the products in our database as JSON objects
         
+          console.log(this.listings[0].address_number);
         },
         err => {
           // Invalid, login!
           console.log(err);
         }
       );
-    
+
    
 }
 

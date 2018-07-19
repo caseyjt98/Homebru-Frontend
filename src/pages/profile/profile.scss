@@ -4,23 +4,23 @@ page-profile {
         display: flex;
         justify-content: center;
     }
+   
+
     #profileImg {
-        font-size: 200px;
+        border-radius: 50%;
         align-content: center;
         text-align: center;  
         color: gray;
         margin-left: auto;
         margin-right: auto;
+        height: 200px;
+        width: 200px;
+        
     
         display: flex;
         justify-content: center;
     }
 
-    #addProfilePic {
-        color: gray;
-        width: 30px;
-        height: 30px;
-    }
 
     #editprofile {
         color: gray;
