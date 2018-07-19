@@ -40,9 +40,7 @@ export class Registration2Page {
           email: email,
           password: password,
           is_subleaser: this.is_subleaser
-
         });
-      
     }
   
   }
