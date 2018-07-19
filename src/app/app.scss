@@ -22,4 +22,10 @@
   }
 */
 
- 
+ion-header ion-icon.back-button-icon.icon {
+  color: map-get($colors, black);
+}
+
+.back-button-icon-ios {
+  color: black;
+}
