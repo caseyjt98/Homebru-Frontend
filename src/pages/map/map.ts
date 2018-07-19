@@ -135,8 +135,15 @@ export class MapPage {
         position: position,
         map: this.map
       });
+
+      marker.addListener('click', function() {
+        this.map.setZoom(18);
+        this.map.setCenter(marker.getPosition());
+      });
     }
 
   }
+
+  
 
 }

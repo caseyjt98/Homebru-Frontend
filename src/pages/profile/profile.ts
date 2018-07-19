@@ -16,7 +16,7 @@ export class ProfilePage {
   public first_name: string;
   public last_name: string;
   public email: string;
-  public base64Image: string;
+  public base64Image: string= "https://www.timeshighereducation.com/sites/default/files/byline_photos/default-avatar.png";
 
   constructor(public navCtrl: NavController, private http: Http, private alertCtrl: AlertController, private camera: Camera) {
     let t = localStorage.getItem("TOKEN");
@@ -34,7 +34,7 @@ export class ProfilePage {
           this.first_name = result.user.first_name;
           this.last_name = result.user.last_name;
           if (!result.user.image) { //User has not yet uploaded a profile picture
-            this.base64Image= "";
+            this.base64Image= "https://www.timeshighereducation.com/sites/default/files/byline_photos/default-avatar.png";
           }
           else { //User had a profile picture
             this.base64Image = result.user.image;

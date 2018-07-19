@@ -57,7 +57,7 @@ export class SignInPage {
     err => {
       console.log(err);
       alert("Failed to login");
-      this.navigateToLogin();
+      //this.navigateToLogin();
     }
   );
 
