@@ -1,4 +1,9 @@
 page-details {
+
+    #background {
+        background-color:rgba(186, 217, 219, 0.521);
+    }
+
     .toolbar-background {
         background-color: #5d74a7ad;
       }
@@ -9,5 +14,12 @@ page-details {
     }
     #text {
         font-family: Gill Sans, sans-serif; 
+    }
+
+    #small-text {
+        font-family: Gill Sans, sans-serif; 
+        font-weight: light;
+        display: flex;
+        justify-content: center;
     }
 }

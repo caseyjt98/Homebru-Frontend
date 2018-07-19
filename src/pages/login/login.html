@@ -1,7 +1,7 @@
 <ion-header>
 
     <ion-card> 
-            <ion-navbar> 
+            <ion-navbar id = "background"> 
 
                     <ion-title>
                         Browse Available Properties     
@@ -33,9 +33,9 @@
                             <ion-label range-right id = "range-val"> 2000 </ion-label>
                         </ion-range>
                     </ion-col>
-
+                
                     <ion-col text-center>
-                        <button ion-button (click) = "navigateToMap()"> View Map </button>
+                        <button ion-button color = "primary" (click) = "navigateToMap()"> View Map </button>
                     </ion-col>
             </ion-row>
                                               
@@ -50,7 +50,7 @@
        <ion-list *ngFor= "let property of listings">
             <!-- price range restrictions... if product price falls between min and max range, display it -->
             
-            
+
             <ion-card id = "address">
                     <img src = {{property.image}}
                     style = "width:450px;height:300px;"/>

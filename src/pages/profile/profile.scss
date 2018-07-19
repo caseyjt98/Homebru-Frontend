@@ -1,5 +1,9 @@
 page-profile {
     
+    #center-button {
+        display: flex;
+        justify-content: center;
+    }
     #profileImg {
         font-size: 200px;
         align-content: center;
@@ -56,5 +60,5 @@ page-profile {
     background-color: #5d74a7ad;
   }
 
-  
+
 }

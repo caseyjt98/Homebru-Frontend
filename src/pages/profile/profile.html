@@ -86,17 +86,7 @@
 
               <ion-list *ngSwitchCase= "'payments'">
                 <ion-item>
-                  <button ion-button block color = "dark"> Set up a Renewing Payment Plan   
-                    </button>
-                </ion-item>
-                  
-                <ion-item>
-                    <button ion-button block color = "dark"> Set up a One-time Payment Plan   
-                    </button>
-                  </ion-item>
-
-                <ion-item>
-                    <button ion-button block color = "dark" (click) =  "navigateToPaymentHistory()"> View Payment History</button>
+                    <button ion-button block id = "center-button" color = "dark" (click) =  "navigateToPaymentHistory()"> View Payment History</button>
                 </ion-item>
               </ion-list>
             </div>

@@ -10,38 +10,46 @@
     </ion-navbar>
   
 </ion-header>
-  
-  
-  
-public id: number;
-public address_number: number;
-public street_name: string;
-public city: string;
-public zip_code: number;
-public apt_number: number;    // NULL by default bc optional
-public details: string;
-    public image: string;
 
 
-  <ion-content padding>
+  <ion-content padding id = "background">
+
     <ion-card>
-      <ion-title id = "address">
-          {{currProperty.address_number}} {{this.currProperty.street_name}} 
-          <br> {{this.currProperty.city}} 
+
+      <ion-title padding-top id = "address">
+        {{currProperty.address_number}} {{this.currProperty.street_name}} 
+        <br> {{this.currProperty.city}} 
       </ion-title>
+    
+  
 
-      <body id = "text">
-        This property has 
-      </body>
+      <ion-card>
+          <ion-slides>
+              <ion-slide>
+                <img src = "https://t-ec.bstatic.com/images/hotel/max1024x768/828/82898480.jpg"/>
+              </ion-slide>
+              <ion-slide>
+                <img src = "https://07f138315bb5e97f9e43-31068357019044cca7c8e84d92de0d99.ssl.cf3.rackcdn.com/1024x768/56587_11491_001.jpg"/>
+              </ion-slide>
+              <ion-slide>
+                <img src = "https://atmedia.imgix.net/976180eb7f351759fdc5590610f3966de1a5f069?auto=format&q=45&w=398.0&fit=max&cs=strip"/>
+              </ion-slide>
+            </ion-slides>
+      </ion-card>
 
 
+      <h2 id = "small-text" text-align = "center"> Swipe to view photos </h2>
+      <h3 padding-left padding-top padding-bottom padding-right id = "text">
+          {{currProperty.num_bedrooms}} bedrooms, {{currProperty.num_bathrooms}} bathrooms, {{currProperty.num_residents}} current residents. Pet friendly, laundry services included. One parking spot available for extra cost. 
+      </h3>
 
-      <img ion-img src = {{currProperty.image}}
-      style= "width:250px;height:300px;" />
+     
+     
     </ion-card>
 
-
+<!-- 
     <img src = {{currProperty.image}}
       style= "width:250px;height:300px;" />
+ -->
       
   </ion-content>
