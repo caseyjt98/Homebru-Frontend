@@ -59,6 +59,16 @@ navigateToMap() {
     this.buttonColor= '#AEAAAA';
   }
 
+  // redisplay products in price range ---- call this function when the slider is adjusted
+  /*
+  ProductsInPriceRange() {
+    var productArray = this.listings;
+    for (let property in this.listings) {
+      if (property.price 
+    }
+  }
+  */
+
   addToSavedProperties() {
     
   }

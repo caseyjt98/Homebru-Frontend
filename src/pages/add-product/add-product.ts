@@ -18,7 +18,7 @@ import { ProfilePage } from '../profile/profile';
 })
 export class AddProductPage {
 
-  // pass in jwt to this page 
+  // pass in jwt to this page ?
 
   public address_number: number;
   public street_name: string;
@@ -52,7 +52,6 @@ export class AddProductPage {
 
   }
 
-  // FINISH THIS LATER, make post request for newly created product
   // register new user by calling post to our backend
   
   postProduct () {
@@ -68,7 +67,10 @@ export class AddProductPage {
     product.num_residents= this.num_residents;
     product.num_bedrooms= this.num_bedrooms;
     product.num_bathrooms= this.num_bathrooms;
-
+    
+    console.log("addres num: "+ product.address_number);
+    console.log("street name: "+ product.street_name);
+    console.log("city: "+ product.city);
     
 
     this.http.post("https://homebru-subletting.herokuapp.com/product", product)

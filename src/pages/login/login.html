@@ -48,7 +48,9 @@
         <p></p>
       
        <ion-list *ngFor= "let property of listings">
-    
+            <!-- price range restrictions... if product price falls between min and max range, display it -->
+            
+            
             <ion-card id = "address">
                     <img src = {{property.image}}
                     style = "width:450px;height:300px;"/>
