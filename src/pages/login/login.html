@@ -15,6 +15,7 @@
             </ion-navbar>
 
             <ion-row no-padding>
+                
                 <!--
                     <ion-col>
                         <ion-item>
@@ -23,19 +24,23 @@
                     </ion-col>
                 -->
                 
+                    <!-- 
                     <ion-col text-center>
-                        <h1 id = "price-range" padding-top padding-bottom> Price Range </h1>
+                        <h1 id = "price-range" padding-top padding-bottom> Price Range </h1> 
                     </ion-col>
+                     -->
 
                     <ion-col>
-                        <ion-range  min="0" max="2000" [(ngModel)]="priceRange" color = "secondary" > 
-                            <ion-label range-left id = "range-val"> 0 </ion-label>
-                            <ion-label range-right id = "range-val"> 2000 </ion-label>
+                        
+                        <ion-range  min="$0" max="$1500" [(ngModel)]="priceRange" color = "secondary" > 
+                            <ion-label range-left id = "range-val"> $0 </ion-label>
+                            <ion-label range-right id = "range-val"> $1500 </ion-label>
                         </ion-range>
+                        
                     </ion-col>
                 
                     <ion-col text-center>
-                        <button ion-button color = "primary" (click) = "navigateToMap()"> View Map </button>
+                        <button ion-button color = "danger" (click) = "navigateToMap()"> View Map </button>
                     </ion-col>
             </ion-row>
                                               
