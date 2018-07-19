@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
 import { Product } from '../models/product';
 
 @Component({
@@ -21,6 +20,7 @@ export class User {
     public location: string;
     public is_subleaser: boolean;
     public image: string;
+    public saved_properties: Product;
 
     constructor() {
         this.is_subleaser = false;        // false by default, will change upon registration

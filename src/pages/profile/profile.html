@@ -13,10 +13,10 @@
       
       <ion-content padding center>
       
-            <ion-icon center name="ios-contact-outline" default id= "profileImg" (click)= "editProfilePic()"> </ion-icon>
-         
-            Latest Picture:
-          <img [src]="base64Image" *ngIf="base64Image" />
+        <ion-avatar id= "profileImg" (click)="editProfilePic()"><img [src]="base64Image" *ngIf="base64Image" > </ion-avatar>
+
+           
+          
 
           <div padding>
               <ion-segment [(ngModel)]="profile">

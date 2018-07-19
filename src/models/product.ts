@@ -17,6 +17,10 @@ export class Product {
     public details: string;
     public image: string;
 
+    public num_residents: number;
+    public num_bedrooms: number;
+    public num_bathrooms: number;
+
   
 constructor() {}
 

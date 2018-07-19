@@ -1,15 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { LoginPage } from '../login/login'; 
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-
-/**
- * Generated class for the SignInPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-sign-in',
@@ -22,7 +15,7 @@ export class SignInPage {
   email: string;
   password: string;
 
-  constructor(public navCtrl: NavController, private http: Http) {
+  constructor(public navCtrl: NavController, private http: Http,  private alertCtrl: AlertController) {
 
 
     if (localStorage.getItem("TOKEN")) {
@@ -35,6 +28,7 @@ export class SignInPage {
   
         err => {
           // Invalid, login!
+          console.log(err);
         }
       );
 
@@ -78,6 +72,41 @@ export class SignInPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignInPage');
+  }
+
+  popUp() {
+
+    console.log("forgot password");
+    let prompt = this.alertCtrl.create({
+      title: 'Find Your Homebru account',
+      message: "Enter email address to send password reset email to",
+      inputs: [
+        {
+          name: 'email',
+          placeholder: 'Email'
+        }
+        
+      ],
+      
+      buttons: [    
+        {
+          text: 'Cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Send Email',
+          handler: data => {
+            console.log('sending password reset email');
+          }
+        },
+        
+      ]
+    });
+    prompt.present();
+
+
   }
 
 }

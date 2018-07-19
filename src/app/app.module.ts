@@ -53,7 +53,8 @@ import { SignInPage } from '../pages/sign-in/sign-in';
     Registration3Page,
     AddProductPage,
     MapPage,
-    SignInPage
+    SignInPage,
+  
   
   ],
   providers: [
