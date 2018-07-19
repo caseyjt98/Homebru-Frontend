@@ -18,7 +18,7 @@ import { ProfilePage } from '../profile/profile';
 })
 export class AddProductPage {
 
-  // pass in jwt to this page 
+  // pass in jwt to this page ?
 
   public address_number: number;
   public street_name: string;
@@ -48,7 +48,6 @@ export class AddProductPage {
 
   }
 
-  // FINISH THIS LATER, make post request for newly created product
   // register new user by calling post to our backend
   
   postProduct () {
@@ -58,9 +57,9 @@ export class AddProductPage {
     product.street_name = this.street_name;
     product.city = this.city;
     product.zip_code = this.zip_code;
-    product.apt_number = this.apt_number;
-    product.details = this.details;
-    product.image= this.image;
+    product.apt_number = this.apt_number || null;
+    product.details = this.details || null;
+    product.image= this.image || null;
     
     console.log("addres num: "+ product.address_number);
     console.log("street name: "+ product.street_name);

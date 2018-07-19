@@ -18,7 +18,7 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController, public http: Http) {
 
-    //Get all products from database
+    // Get all products from database
     this.http.get("https://homebru-subletting.herokuapp.com/products")
     .subscribe(
         response => {
@@ -56,6 +56,16 @@ navigateToMap() {
   changeSaveButtonColor() {
     this.buttonColor= '#AEAAAA';
   }
+
+  // redisplay products in price range ---- call this function when the slider is adjusted
+  /*
+  ProductsInPriceRange() {
+    var productArray = this.listings;
+    for (let property in this.listings) {
+      if (property.price 
+    }
+  }
+  */
 
   addToSavedProperties() {
     
